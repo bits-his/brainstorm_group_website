@@ -53,6 +53,7 @@ export default function AppNavigation() {
               <>
                 {navigateToHome()}
                 <Home sections={sectionRefs} />
+                
               </>
             }
           />
