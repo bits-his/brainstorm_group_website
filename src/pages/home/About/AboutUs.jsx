@@ -1,13 +1,19 @@
 import { TbEye } from "react-icons/tb"; 
 import img from "../../../assets/DSC_0701.jpg";
-
+import CoreValue from "../CoreValues/CoreValues";
+import { Target, Compass } from "lucide-react";
 export default function AboutUs({ Ref }) {
   return (
     <>
       <div className="px-5 my-5" ref={Ref} id="about">
+        <h2 className="services-title">
+          About <span>us</span>
+        </h2>
         <div className="row align-items-center">
           <div className="col-md-12 col-lg-6 mb-4 mb-md-0">
-            <h1 className="mb-4">About Us</h1>
+            <h3 className="mb-2" style={{ color: "#076ACD" }}>
+              Brainstorm Group
+            </h3>
             <p className="mb-4">
               Brainstorm Group is a group of companies that provide a range of
               services to businesses and individuals.This is also a medium for
@@ -17,28 +23,36 @@ export default function AboutUs({ Ref }) {
             </p>
             <div className="row mb-md-4">
               <div className="col-md-6">
-                <TbEye
+                <Target
                   size={40}
                   fontWeight="bold"
-                  color="gray"
+                  // color="gray"
                   className="mb-2"
+                  style={{ color: "#076ACD" }}
                 />
-                <h5 className="mb-2">Mission</h5>
-                <p className="small mb-2">
+                <h5 className="mb-2" style={{ color: "#076ACD" }}>
+                  Mission
+                </h5>
+                <p className=" mb-2">
                   To attain global reputation for providing easy to use,
                   innovative, and problem solving technology solutions for
                   Public, and Private Sectors.
                 </p>
               </div>
               <div className="col-md-6">
-                <TbEye
+                <Compass
                   size={40}
                   fontWeight="bold"
-                  color="gray"
+                  // color="gray"
+                  style={{ color: "#076ACD" }}
                   className="mb-2"
+
+                  // style={{ color: "#ff3b45" }}
                 />
-                <h5 className="mb-2">Vision</h5>
-                <p className="small mb-2">
+                <h5 className="mb-2" style={{ color: "#076ACD" }}>
+                  Vision
+                </h5>
+                <p className=" mb-2">
                   We incubate and accelerate innovative ideas into successful
                   companies and provide technology solutions for Public, and
                   Private Sectors.
@@ -57,6 +71,7 @@ export default function AboutUs({ Ref }) {
             />
           </div>
         </div>
+        <CoreValue />
       </div>
     </>
   );

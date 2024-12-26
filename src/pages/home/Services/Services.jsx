@@ -57,7 +57,7 @@ const services = [
 export default function Services({ refi }) {
   return (
     <div id="services" ref={refi}>
-      <section className="py-12 px-4 md:py-24">
+      <section className="py-12 px-5 md:py-24">
         <div className="services-header">
           <h2 className="services-title">
             Our <span>Services</span>
