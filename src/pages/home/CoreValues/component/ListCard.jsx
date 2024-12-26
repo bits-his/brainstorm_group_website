@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+    
 export default function ListCard({ name, description }) {
   return (
     <div>
@@ -5,15 +7,19 @@ export default function ListCard({ name, description }) {
       <div className="position-relative mb-4">
         <div className="dots-pattern"></div>
         <h3 className="text-primary mb-3">{name}</h3>
-        <div className="row">
-          <ul className=" col-md-4 col-sm-4  text-start ">
-            <li className="">
-              <i className="text-success me-2">✔</i>
-              {description}
-            </li>
-          </ul>
-        </div>
+        <ul className=" row list-unstyled text-start ">
+          <li className="col-md-12 col-sm-4">
+            <i className="text-success me-2">✔</i>
+            {description}
+          </li>
+        </ul>
       </div>
     </div>
   );
 }
+
+ListCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
+

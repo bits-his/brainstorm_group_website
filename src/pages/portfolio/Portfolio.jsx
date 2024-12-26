@@ -2,6 +2,13 @@ import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './portfolio.styles.css';
 import ListCard from '../home/CoreValues/component/ListCard';
+import logo from "../../assets/logo.png";
+import mylikita from "../../assets/logos/mlt.png";
+import elite from "../../assets/logos/elite.png";
+import inventria from "../../assets/logos/inv.png";
+import bitcoops from "../../assets/logos/bit-removebg-preview.png";
+import kasuwa from "../../assets/logos/kasuwa-removebg-preview.png";
+import knowtify from "../../assets/logos/knowtify copy.png";
 
 export default function Portfolio({ refi }) {
   const [activeStartup, setActiveStartup] = useState('solutions');
@@ -11,6 +18,7 @@ export default function Portfolio({ refi }) {
     {
       id: 'solutions',
       name: 'Brainstorm IT Solutions',
+      image: logo,
       description: 'A leading IT solutions provider specializing in custom software development, web applications, and digital transformation services.',
       link: 'https://brainstorm.ng',
       list:[
@@ -31,6 +39,7 @@ export default function Portfolio({ refi }) {
     {
       id: 'likita',
       name: 'My Likita',
+      image: mylikita,
       description: 'Healthcare management system that connects patients with healthcare providers, enabling easy access to medical services.',
       link: 'https://mylikita.com',
       list:[
@@ -52,6 +61,7 @@ export default function Portfolio({ refi }) {
     {
       id: 'elite',
       name: 'Elite School App',
+      image: elite,
       description: 'Comprehensive school management system that streamlines educational processes and enhances communication between schools and parents.',
       link: 'https://elscholar.ng',
       list:[
@@ -72,6 +82,7 @@ export default function Portfolio({ refi }) {
     {
       id: 'inventria',
       name: 'Inventria',
+      image: inventria,
       description: 'Advanced inventory management system for businesses to track and optimize their stock levels efficiently.',
       link: 'https://inventria-new.netlify.app',
       list:[
@@ -92,6 +103,7 @@ export default function Portfolio({ refi }) {
     {
       id: 'bitcoops',
       name: 'Bitcoops',
+      image: bitcoops,
       description: 'Digital platform for cooperative societies to manage their operations and member transactions seamlessly.',
       link: 'https://www.bitcoops.com',
       list:[
@@ -112,6 +124,7 @@ export default function Portfolio({ refi }) {
     {
       id: 'kasuwa',
       name: 'Kasuwa Mall',
+      image: kasuwa,
       description: 'E-commerce platform connecting local vendors with customers, providing a seamless shopping experience.',
       link: 'https://kasuwamall.com',
       list:[
@@ -132,6 +145,7 @@ export default function Portfolio({ refi }) {
     {
       id: 'knowtify',
       name: 'Knowtify',
+      image: knowtify,
       description: 'Educational technology platform providing interactive learning experiences and knowledge sharing.',
       link: 'https://www.knowtify.com.ng',
       list:[
@@ -203,7 +217,8 @@ export default function Portfolio({ refi }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <h2>{startup.name}</h2>
+                {/* <h2>{startup.name}</h2> */}
+                <img src={startup.image} alt={startup.name} width={150} height={100} />
                 <p>{startup.description}</p>
 
                 {startup.list.map((item, index) => (

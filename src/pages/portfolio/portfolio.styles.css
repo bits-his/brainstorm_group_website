@@ -39,12 +39,13 @@
   }
   
   .startup-menu li.active a {
-    background: #076ACD;
-    color: white;
+    color: #076ACD;
+    background: #95c3f0;
+
   }
   
   .startup-menu li:hover a {
-    background: #e9ecef;
+    background: #95c3f0;
     color: #076ACD;
   }
   

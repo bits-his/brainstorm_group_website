@@ -143,75 +143,75 @@ export default function CoreValue({ Ref }) {
             </div>
           </div>
           <div className="col-md-12 col-lg-6 mb-4 mb-md-0">
-            <h1 className="mb-4">Core Values</h1>
+            <h1 className="mb-4 core-values-title">Core <span>Values</span></h1>
             <div className="core-values-list">
               <div className="value-row">
-                <span className="value-letter">B</span>
-                <span className="value-text">
-                  Being Present - Great opportunity or sudden insight often
+                <span className="value-letter core-values-letter">B</span>
+                <span className="core-values-text">
+                  <span>Being Present</span> - Great opportunity or sudden insight often
                   emerges when you are present
                 </span>
               </div>
               <div className="value-row">
-                <span className="value-letter">R</span>
-                <span className="value-text">
-                  Resilience - We cultivate the right behaviors and thoughts
+                <span className="value-letter core-values-letter">R</span>
+                <span className="core-values-text">
+                  <span>Resilience</span> - We cultivate the right behaviors and thoughts
                   required to overcome obstacles and achieve our goals
                 </span>
               </div>
               <div className="value-row">
-                <span className="value-letter">A</span>
-                <span className="value-text">
-                  Accountability - We don't hide mistakes. We don't shift blame.
+                <span className="value-letter core-values-letter">A</span>
+                <span className="core-values-text">
+                  <span>Accountability</span> - We don't hide mistakes. We don't shift blame.
                   We learn from our mistakes.
                 </span>
               </div>
               <div className="value-row">
-                <span className="value-letter">I</span>
-                <span className="value-text">
-                  Integrity - We are honest, transparent, and ethical in all
+                <span className="value-letter core-values-letter    ">I</span>
+                <span className="core-values-text">
+                  <span>Integrity</span> - We are honest, transparent, and ethical in all
                   business engagements
                 </span>
               </div>
               <div className="value-row">
-                <span className="value-letter">N</span>
-                <span className="value-text">
-                  Non-Conformity - We question the status quo and seek
+                <span className="value-letter core-values-letter    ">N</span>
+                <span className="core-values-text">
+                  <span>Non-Conformity</span> - We question the status quo and seek
                   alternative ideas
                 </span>
               </div>
               <div className="value-row">
-                <span className="value-letter">S</span>
-                <span className="value-text">
-                  Service - Quality experience for our customers, local
+                <span className="value-letter core-values-letter">S</span>
+                <span className="core-values-text">
+                  <span>Service</span> - Quality experience for our customers, local
                   community, and our team
                 </span>
               </div>
               <div className="value-row">
-                <span className="value-letter">T</span>
-                <span className="value-text">
-                  Teamwork - We drive workforce efficiency by encouraging
+                <span className="value-letter core-values-letter">T</span>
+                <span className="core-values-text">
+                  <span>Teamwork</span> - We drive workforce efficiency by encouraging
                   collaboration, mutual respect, and shared responsibility
                 </span>
               </div>
               <div className="value-row">
-                <span className="value-letter">O</span>
-                <span className="value-text">
-                  Operational Excellence - We automate and continuously improve
+                <span className="value-letter core-values-letter">O</span>
+                <span className="core-values-text">
+                  <span>Operational Excellence</span> - We automate and continuously improve
                   our internal processes to promote efficiency.
                 </span>
               </div>
               <div className="value-row">
-                <span className="value-letter">R</span>
-                <span className="value-text">
-                  Resourcefulness - We thrive by finding innovative solutions to
+                <span className="value-letter core-values-letter">R</span>
+                <span className="core-values-text">
+                  <span>Resourcefulness</span> - We thrive by finding innovative solutions to
                   problems using available resources
                 </span>
               </div>
               <div className="value-row">
-                <span className="value-letter">M</span>
-                <span className="value-text">
-                  Mentorship - Provide technology and Business mentorship to
+                <span className="value-letter core-values-letter">M</span>
+                <span className="core-values-text">
+                  <span>Mentorship</span> - Provide technology and Business mentorship to
                   talented youth irrespective of background
                 </span>
               </div>

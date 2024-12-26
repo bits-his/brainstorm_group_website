@@ -1,5 +1,5 @@
-
 import { motion } from "framer-motion";
+import { TypeAnimation } from 'react-type-animation';
 // import Magnet from './Magnet';
 import logo from "../../../assets/logo.png";
 import mylikita from "../../../assets/logos/mlt.png";
@@ -11,6 +11,7 @@ import knowtify from "../../../assets/logos/knowtify copy.png";
 import hero from "../../../assets/hero.jpg";
 import "../../../pages/home/home.styles.css";
 import PropTypes from "prop-types";
+// import { FaLightbulb } from "react-icons/fa";
 
 const HeroBackground = ({ background }) => {
   if (!background) {
@@ -36,8 +37,9 @@ const HeroBackground = ({ background }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          filter: "brightness(0.9)",
+          filter: "brightness(0.4)",
           transition: "all 0.3s ease-in-out",
+        //   background: "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)"
         }}
       />
     );
@@ -83,60 +85,49 @@ export default function Hero({ ref }) {
         transition={{ duration: 1 }}
         className="hero-content"
       >
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="hero-title"
-        >
-          Brainstorm Group
-        </motion.h1>
-        <motion.h4
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="hero-subtitle"
-        >
-          {startups[0].description}
-        </motion.h4>
-        
-        {/* Corevalue Component  */}
-        {/* <div className={`startup-ecosystem ${isAnyHovered ? 'paused' : ''}`}>
-          {startups.map((startup) => (
-            <motion.div
-              key={startup.id}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: startup.id === 'parent' ? 0 : 0.2 }}
-            >
-              <Magnet>
-                <div 
-                  className={`startup-node ${startup.id} ${startup.id === 'parent' ? 'parent' : ''}`}
-                  onMouseEnter={() => {
-                    setHoveredStartup(startup.id);
-                    setIsAnyHovered(true);
-                  }}
-                  onMouseLeave={() => {
-                    setHoveredStartup(null);
-                    setIsAnyHovered(false);
-                  }}
-                >
-                  <img src={startup.logo} alt={startup.name} className="startup-logo" />
-                  {hoveredStartup === startup.id && (
-                    <motion.div 
-                      className="startup-description"
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <h3>{startup.name}</h3>
-                    </motion.div>
-                  )}
+        <div className="hero-text-content">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="hero-title"
+          >
+           Welcome to Brainstorm
+            {/* <div className="text-logo align-center justify-center flex items-center">
+                <FaLightbulb className="brainstorm-icon" />
+                <div className="text-content">
+                  Brainstorm
+                  <span>Group</span>
                 </div>
-              </Magnet>
-            </motion.div>
-          ))}
-        </div> */}
+              </div> */}
+          </motion.h1>
+
+          <TypeAnimation
+            sequence={[
+              'Group of companies',
+              1000,
+              'Transforming businesses',
+              1000,
+              'Innovating solutions',
+              1000,
+            ]}
+            wrapper="h2"
+            speed={50}
+            className="typing-text"
+            repeat={Infinity}
+          />
+
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="hero-description"
+          >
+            We are a group of companies dedicated to delivering cutting-edge solutions
+            across multiple industries. Our mission is to transform ideas into reality
+            through technology and innovation.
+          </motion.p>
+        </div>
 
         <motion.div
           className="bottom-logo-strip"
@@ -145,10 +136,15 @@ export default function Hero({ ref }) {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           {startups.filter(s => s.id !== 'parent').map((startup) => (
-            <div key={startup.id} className="bottom-logo">
-              <img src={startup.logo} alt={startup.name} />
-              <span className="bottom-logo-name" title={startup.name}>{startup.abbr}</span>
-            </div>
+            <motion.div 
+              key={startup.id} 
+              className="bottom-logo"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <img src={startup.logo} alt={startup.name} title={startup.name} />
+              <span className="bottom-logo-name" title={startup.name}></span>
+            </motion.div>
           ))}
         </motion.div>
       </motion.div>
