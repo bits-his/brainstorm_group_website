@@ -1,5 +1,3 @@
-// import { type LucideIcon } from 'lucide-react'
-// import Link from 'next/link'
 
 import { Link } from "react-router-dom";
 import "./ServiceCard.css";
