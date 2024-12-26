@@ -58,14 +58,14 @@ const Hero =  function({ ref }) {
   const [isAnyHovered, setIsAnyHovered] = useState(false);
 
   const startups = [
-    { id: 'parent', name: 'Brainstorm Group', logo: logo, abbr: 'BG' },
-    { id: 'solutions', name: 'Brainstorm IT Solutions', logo: logo, abbr: 'BIS' },
-    { id: 'likita', name: 'My Likita', logo: logo, abbr: 'ML' },
-    { id: 'elite', name: 'Elite School App', logo: logo, abbr: 'ESA' },
-    { id: 'inventria', name: 'Inventria', logo: logo, abbr: 'INV' },
-    { id: 'bitcoops', name: 'Bitcoops', logo: logo, abbr: 'BC' },
-    { id: 'kasuwa', name: 'Kasuwa Mall', logo: logo, abbr: 'KM' },
-    { id: 'knowtify', name: 'Knowtify', logo: logo, abbr: 'KN' }
+    { id: 'parent', name: 'Brainstorm Group', logo: logo, abbr: 'BG', link: 'https://brainstormgroup.com', description: 'Brainstorm Group is a group of companies that provide a range of services to businesses and individuals.' },
+    { id: 'solutions', name: 'Brainstorm IT Solutions', logo: logo, abbr: 'BIS', link: 'https://brainstormitsolutions.com', description: 'Brainstorm IT Solutions is a company that provides IT solutions to businesses and individuals.'    },
+    { id: 'likita', name: 'My Likita', logo: logo, abbr: 'ML', link: 'https://mylikita.com', description: 'My Likita is a platform that allows users to manage their daily tasks and schedules.' },
+    { id: 'elite', name: 'Elite School App', logo: logo, abbr: 'ESA', link: 'https://eliteschoolapp.com', description: 'Elite School App is a platform that allows users to manage their daily tasks and schedules.' },
+    { id: 'inventria', name: 'Inventria', logo: logo, abbr: 'INV', link: 'https://inventria.com', description: 'Inventria is a company that provides a range of services to businesses and individuals.' },
+    { id: 'bitcoops', name: 'Bitcoops', logo: logo, abbr: 'BC', link: 'https://bitcoops.com', description: 'Bitcoops is a company that provides a range of services to businesses and individuals.' },
+    { id: 'kasuwa', name: 'Kasuwa Mall', logo: logo, abbr: 'KM', link: 'https://kasuwa.com', description: 'Kasuwa Mall is a platform that allows users to manage their daily tasks and schedules.' },
+    { id: 'knowtify', name: 'Knowtify', logo: logo, abbr: 'KN', link: 'https://knowtify.com', description: 'Knowtify is a early warning system that allows peopple evacuate from danger zones and save lives.' }
   ];
 
   // Example background config
@@ -92,6 +92,14 @@ const Hero =  function({ ref }) {
         >
           Brainstorm Group
         </motion.h1>
+        <motion.h4
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="hero-subtitle"
+        >
+          {startups[0].description}
+        </motion.h4>
         
         {/* Corevalue Component  */}
         {/* <div className={`startup-ecosystem ${isAnyHovered ? 'paused' : ''}`}>
@@ -140,6 +148,7 @@ const Hero =  function({ ref }) {
           {startups.filter(s => s.id !== 'parent').map((startup) => (
             <div key={startup.id} className="bottom-logo">
               <img src={startup.logo} alt={startup.name} />
+              
               <span className="bottom-logo-name" title={startup.name}>{startup.abbr}</span>
             </div>
           ))}
