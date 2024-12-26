@@ -186,6 +186,11 @@ export default function Portfolio({ refi }) {
 
   return (
     <div className="portfolio-container" ref={refi} id='portfolio'>
+         <div className="services-header">
+          <h2 className="services-title">
+            Our <span>Portfolio</span>
+          </h2>
+        </div>
       <div className="row">
         {/* Sidebar Menu - 3 columns */}
         <div className="col-md-3">

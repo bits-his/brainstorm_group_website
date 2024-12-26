@@ -2,8 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Magnet from "../Magnet";
 import logo from "../../../assets/logo.png";
-import mylikita from "../../../assets/logos/mlt.png";
 import brainstormgroup from "../../../assets/logos/brainstorm group.png";
+import mylikita from "../../../assets/logos/mlt.png";
 import elite from "../../../assets/logos/elite.png";
 import inventria from "../../../assets/logos/inv.png";
 import bitcoops from "../../../assets/logos/bit-removebg-preview.png";
@@ -22,7 +22,7 @@ export default function CoreValue({ Ref }) {
       abbr: "BG",
       link: "https://brainstormgroup.com",
       description:
-        "Brainstorm Group is a group of companies that provide a range of services to businesses and individuals."
+        "Brainstorm Group is a group of companies that provide a range of services to businesses and individuals.",
     },
     {
       id: "solutions",
@@ -31,7 +31,7 @@ export default function CoreValue({ Ref }) {
       abbr: "BIS",
       link: "https://brainstormitsolutions.com",
       description:
-        "Brainstorm IT Solutions is a company that provides IT solutions to businesses and individuals."
+        "Brainstorm IT Solutions is a company that provides IT solutions to businesses and individuals.",
     },
     {
       id: "likita",
@@ -40,7 +40,7 @@ export default function CoreValue({ Ref }) {
       abbr: "ML",
       link: "https://mylikita.com",
       description:
-        "My Likita is a platform that allows users to manage their daily tasks and schedules."
+        "My Likita is a platform that allows users to manage their daily tasks and schedules.",
     },
     {
       id: "elite",
@@ -49,7 +49,7 @@ export default function CoreValue({ Ref }) {
       abbr: "ESA",
       link: "https://eliteschoolapp.com",
       description:
-        "Elite School App is a platform that allows users to manage their daily tasks and schedules."
+        "Elite School App is a platform that allows users to manage their daily tasks and schedules.",
     },
     {
       id: "inventria",
@@ -58,7 +58,7 @@ export default function CoreValue({ Ref }) {
       abbr: "INV",
       link: "https://inventria.com",
       description:
-        "Inventria is a company that provides a range of services to businesses and individuals."
+        "Inventria is a company that provides a range of services to businesses and individuals.",
     },
     {
       id: "bitcoops",
@@ -67,7 +67,7 @@ export default function CoreValue({ Ref }) {
       abbr: "BC",
       link: "https://bitcoops.com",
       description:
-        "Bitcoops is a company that provides a range of services to businesses and individuals."
+        "Bitcoops is a company that provides a range of services to businesses and individuals.",
     },
     {
       id: "kasuwa",
@@ -76,7 +76,7 @@ export default function CoreValue({ Ref }) {
       abbr: "KM",
       link: "https://kasuwa.com",
       description:
-        "Kasuwa Mall is a platform that allows users to manage their daily tasks and schedules."
+        "Kasuwa Mall is a platform that allows users to manage their daily tasks and schedules.",
     },
     {
       id: "knowtify",
@@ -85,13 +85,13 @@ export default function CoreValue({ Ref }) {
       abbr: "KN",
       link: "https://knowtify.com",
       description:
-        "Knowtify is a early warning system that allows peopple evacuate from danger zones and save lives."
-    }
+        "Knowtify is a early warning system that allows peopple evacuate from danger zones and save lives.",
+    },
   ];
 
   return (
     <>
-      <div className="container my-5" ref={Ref} id="corevalues">
+      <div className="my-5" ref={Ref} id="corevalues">
         <div className="row align-items-center">
           <div className="col-md-12 col-lg-6 mb-4 mb-md-0">
              <div className={`startup-ecosystem ${isAnyHovered ? 'paused' : ''}`}>

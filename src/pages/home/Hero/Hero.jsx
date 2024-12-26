@@ -92,7 +92,7 @@ export default function Hero({ ref }) {
             transition={{ duration: 0.8 }}
             className="hero-title"
           >
-           Welcome to Brainstorm
+           Welcome to Brainstorm Group
             {/* <div className="text-logo align-center justify-center flex items-center">
                 <FaLightbulb className="brainstorm-icon" />
                 <div className="text-content">
