@@ -277,8 +277,8 @@
   flex-wrap: wrap;
   position: absolute;
   top: calc(100% + 10px);
-  /* background: linear-gradient(to top, rgba(7, 106, 205, 0.8), transparent); */
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  background: linear-gradient(to top, transparent);
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); */
 }
 
 .bottom-logo {

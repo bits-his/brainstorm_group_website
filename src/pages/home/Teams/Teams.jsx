@@ -1,11 +1,11 @@
 import React from "react";
 import "./teams.css";
 import {
-  FaFacebookF,
+  // FaFacebookF,
   FaInstagram,
   FaLinkedin,
   FaMailBulk,
-  FaTwitter,
+  // FaTwitter,
 } from "react-icons/fa";
 import { motion } from 'framer-motion';
 
@@ -13,7 +13,7 @@ const teamMembers = [
   {
     id: 1,
     name: "Phisherman",
-    role: "Creative Leader",
+    role: "GROUP CEO",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: "",
@@ -21,7 +21,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Nazif Abdulahi",
-    role: "Sales Manager",
+    role: "GROUP CTO",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: "",
@@ -29,7 +29,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Sadiq Khalifa",
-    role: "Sales Manager",
+    role: "Head Cooperative Services",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: "",
@@ -37,7 +37,7 @@ const teamMembers = [
   {
     id: 4,
     name: "Ismaila Kabir",
-    role: "Sales Manager",
+    role: "Group Head of Operations",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: "",
@@ -45,15 +45,15 @@ const teamMembers = [
   {
     id: 5,
     name: "Bashiru Jibrina",
-    role: "Delivery man",
+    role: "Group Finance Manager",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: "",
   },
   {
     id: 6,
-    name: "John Doe",
-    role: "Sales Manager",
+    name: "Mustapha Issa Toyin",
+    role: "Partner CEO Mylikita",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: "",

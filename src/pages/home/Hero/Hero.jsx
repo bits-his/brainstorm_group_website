@@ -8,7 +8,7 @@ import inventria from "../../../assets/logos/inv.png";
 import bitcoops from "../../../assets/logos/bit-removebg-preview.png";
 import kasuwa from "../../../assets/logos/kasuwa-removebg-preview.png";
 import knowtify from "../../../assets/logos/knowtify copy.png";
-import hero from "../../../assets/hero.jpg";
+import hero from "../../../assets/DSC_0701.jpg";
 import "../../../pages/home/home.styles.css";
 import PropTypes from "prop-types";
 // import { FaLightbulb } from "react-icons/fa";
@@ -37,7 +37,7 @@ const HeroBackground = ({ background }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          filter: "brightness(0.4)",
+          filter: "brightness(0.6)",
           transition: "all 0.3s ease-in-out",
         //   background: "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)"
         }}
