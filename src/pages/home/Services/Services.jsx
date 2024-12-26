@@ -49,7 +49,7 @@ const services = [
     href: "/services/ecommerce",
   },
   {
-    title: "Logistics Solutions",
+    title: "POS and Accounting System",
     description: "Efficient tracking and stock control.",
     icon: MdOutlineInventory, // Represents inventory and logistics
     href: "/services/inventory",

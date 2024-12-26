@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import "../../home.styles.css"
     
 export default function ListCard({ name, description }) {
   return (
@@ -6,10 +7,10 @@ export default function ListCard({ name, description }) {
       {/* list card */}
       <div className="position-relative mb-4">
         <div className="dots-pattern"></div>
-        <h3 className="text-primary mb-3">{name}</h3>
+        <h3 className=" mb-3 core-values-title">{name}</h3>
         <ul className=" row list-unstyled text-start ">
           <li className="col-md-12 col-sm-4">
-            <i className="text-success me-2">✔</i>
+            <i className="list-icon me-2">✔</i>
             {description}
           </li>
         </ul>

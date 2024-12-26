@@ -47,7 +47,7 @@ export default function AppNavigation() {
     <>
       {!invalidRoute && <Navbar sectionRefs={sectionRefs} />}
 
-      <SkeletonTheme baseColor="#076ACD6c" highlightColor="#ff3b456c">
+      <SkeletonTheme baseColor="#var(--main-color)6c" highlightColor="#ff3b456c">
         <Routes>
           <Route
             exact

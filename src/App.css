@@ -1,9 +1,11 @@
 :root{
   --text-color:#111111;
-  --red-color:#ff3b45;
-  --main-color:#076ACD;
+  /* --red-color:orangered; */
+  --red-color:#D9407F;
+  --main-color:#0D47A1;
+  /* --main-color:#var(--main-color); */
   --grey-color:#f9f9f9;
-  --grey-background: rgb(241, 240, 240);
+  --grey-background: #F1F8FE;
   --big-font:5.5rem;
   --h2-font:3.3rem;
   --h3-font:2rem;

@@ -21,7 +21,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Nazif Abdulahi",
-    role: "GROUP CTO",
+    role: "Group Head Legal Services",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: ""
@@ -29,7 +29,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Sadiq Khalifa",
-    role: "Head Cooperative Services",
+    role: "Group Head Operations",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: ""
@@ -37,15 +37,15 @@ const teamMembers = [
   {
     id: 4,
     name: "Ismaila Kabir",
-    role: "Group Head of Operations",
+    role: "Group Head Business Development",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: ""
   },
   {
     id: 5,
-    name: "Bashiru Jibrina",
-    role: "Group Finance Manager",
+    name: "Munzali Muktar",
+    role: "Group Financial Controller",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: ""
@@ -53,39 +53,47 @@ const teamMembers = [
   {
     id: 6,
     name: "Mustapha Issa Toyin",
-    role: "Partner CEO Mylikita",
+    role: " CEO Mylikita",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: ""
   },
   {
     id: 7,
-    name: "Ibrahim Abdulahi",
-    role: "Partner CEO Inventria",
+    name: "Fahad Ado Muhammad",
+    role: " CEO Inventria",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: ""
   },
   {
     id: 8,
-    name: "Ibrahim Abdulahi",
-    role: "Partner CEO Knowtify",
+    name: "Isah Muhammad Rabiu",
+    role: " CEO Knowtify",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: ""
   },
   {
     id: 9,
-    name: "Ibrahim Abdulahi",
-    role: "Partner CEO Bitcoops",
+    name: "Muritala Adewale Akinyemi",
+    role: " CEO Bitcoops",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: ""
   },
   {
     id: 10,
-    name: "Ibrahim Abdulahi",
-    role: "Partner CEO Kasuwa Mall",
+    name: "Mary Dania",
+    role: " CEO Kasuwa Mall",
+    description:
+      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+    image: ""
+  },
+  {
+    id: 11,
+    name: "Ishaq Ibrahim",
+    role: " CEO Elite Academic Tech",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
     image: ""

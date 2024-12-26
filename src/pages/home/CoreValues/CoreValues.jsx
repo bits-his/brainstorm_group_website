@@ -186,21 +186,21 @@ export default function CoreValue({ Ref }) {
               <div className="value-row">
                 <span className="value-letter core-values-letter">O</span>
                 <span className="core-values-text">
-                  Operational Excellence - We automate and continuously improve
+                  <span>Operational Excellence</span> - We automate and continuously improve
                   our internal processes to promote efficiency.
                 </span>
               </div>
               <div className="value-row">
                 <span className="value-letter core-values-letter">R</span>
                 <span className="core-values-text">
-                  Resourcefulness - We thrive by finding innovative solutions to
+                  <span>Resourcefulness</span> - We thrive by finding innovative solutions to
                   problems using available resources
                 </span>
               </div>
               <div className="value-row">
                 <span className="value-letter core-values-letter">M</span>
                 <span className="core-values-text">
-                  Mentorship - Provide technology and Business mentorship to
+                  <span>Mentorship</span> - Provide technology and Business mentorship to
                   talented youth irrespective of background
                 </span>
               </div>
