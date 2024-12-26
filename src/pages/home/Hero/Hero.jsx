@@ -1,43 +1,43 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+
+import { motion } from "framer-motion";
 // import Magnet from './Magnet';
-import logo from '../../../assets/logo.png';
-import hero from '../../../assets/hero.jpg';
-import '../../../pages/home/home.styles.css';
-import PropTypes from 'prop-types';
+import logo from "../../../assets/logo.png";
+import mylikita from "../../../assets/logos/1.jpg";
+import elite from "../../../assets/logos/2.jpg";
+import inventria from "../../../assets/logos/inv.png";
+import bitcoops from "../../../assets/logos/bit-removebg-preview.png";
+import kasuwa from "../../../assets/logos/KASUWAMALL__2_-removebg-preview.png";
+import knowtify from "../../../assets/logos/knowtify.png";
+import hero from "../../../assets/hero.jpg";
+import "../../../pages/home/home.styles.css";
+import PropTypes from "prop-types";
 
 const HeroBackground = ({ background }) => {
   if (!background) {
-    return <div className="hero-background default" />; 
+    return <div className="hero-background default" />;
   }
 
-  if (background.type === 'video') {
+  if (background.type === "video") {
     return (
       <div className="hero-background">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="background-video"
-        >
+        <video autoPlay loop muted playsInline className="background-video">
           <source src={background.url} type="video/mp4" />
         </video>
       </div>
     );
   }
 
-  if (background.type === 'image') {
+  if (background.type === "image") {
     return (
-      <div 
+      <div
         className="hero-background"
-        style={{ 
+        style={{
           backgroundImage: `url(${background.url})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          filter: 'brightness(0.9)',
-          transition: 'all 0.3s ease-in-out'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          filter: "brightness(0.9)",
+          transition: "all 0.3s ease-in-out",
         }}
       />
     );
@@ -48,37 +48,36 @@ const HeroBackground = ({ background }) => {
 
 HeroBackground.propTypes = {
   background: PropTypes.shape({
-    type: PropTypes.oneOf(['video', 'image']),
-    url: PropTypes.string
-  })
+    type: PropTypes.oneOf(["video", "image"]),
+    url: PropTypes.string,
+  }),
 };
 
-const Hero =  function({ ref }) {
-  const [hoveredStartup, setHoveredStartup] = useState(null);
-  const [isAnyHovered, setIsAnyHovered] = useState(false);
+export default function Hero({ ref }) {
+
 
   const startups = [
     { id: 'parent', name: 'Brainstorm Group', logo: logo, abbr: 'BG', link: 'https://brainstormgroup.com', description: 'Brainstorm Group is a group of companies that provide a range of services to businesses and individuals.' },
     { id: 'solutions', name: 'Brainstorm IT Solutions', logo: logo, abbr: 'BIS', link: 'https://brainstormitsolutions.com', description: 'Brainstorm IT Solutions is a company that provides IT solutions to businesses and individuals.'    },
-    { id: 'likita', name: 'My Likita', logo: logo, abbr: 'ML', link: 'https://mylikita.com', description: 'My Likita is a platform that allows users to manage their daily tasks and schedules.' },
-    { id: 'elite', name: 'Elite School App', logo: logo, abbr: 'ESA', link: 'https://eliteschoolapp.com', description: 'Elite School App is a platform that allows users to manage their daily tasks and schedules.' },
-    { id: 'inventria', name: 'Inventria', logo: logo, abbr: 'INV', link: 'https://inventria.com', description: 'Inventria is a company that provides a range of services to businesses and individuals.' },
-    { id: 'bitcoops', name: 'Bitcoops', logo: logo, abbr: 'BC', link: 'https://bitcoops.com', description: 'Bitcoops is a company that provides a range of services to businesses and individuals.' },
-    { id: 'kasuwa', name: 'Kasuwa Mall', logo: logo, abbr: 'KM', link: 'https://kasuwa.com', description: 'Kasuwa Mall is a platform that allows users to manage their daily tasks and schedules.' },
-    { id: 'knowtify', name: 'Knowtify', logo: logo, abbr: 'KN', link: 'https://knowtify.com', description: 'Knowtify is a early warning system that allows peopple evacuate from danger zones and save lives.' }
+    { id: 'likita', name: 'My Likita', logo: mylikita, abbr: 'ML', link: 'https://mylikita.com', description: 'My Likita is a platform that allows users to manage their daily tasks and schedules.' },
+    { id: 'elite', name: 'Elite School App', logo: elite, abbr: 'ESA', link: 'https://eliteschoolapp.com', description: 'Elite School App is a platform that allows users to manage their daily tasks and schedules.' },
+    { id: 'inventria', name: 'Inventria', logo: inventria, abbr: 'INV', link: 'https://inventria.com', description: 'Inventria is a company that provides a range of services to businesses and individuals.' },
+    { id: 'bitcoops', name: 'Bitcoops', logo: bitcoops, abbr: 'BC', link: 'https://bitcoops.com', description: 'Bitcoops is a company that provides a range of services to businesses and individuals.' },
+    { id: 'kasuwa', name: 'Kasuwa Mall', logo: kasuwa, abbr: 'KM', link: 'https://kasuwa.com', description: 'Kasuwa Mall is a platform that allows users to manage their daily tasks and schedules.' },
+    { id: 'knowtify', name: 'Knowtify', logo: knowtify, abbr: 'KN', link: 'https://knowtify.com', description: 'Knowtify is a early warning system that allows peopple evacuate from danger zones and save lives.' }
   ];
 
   // Example background config
   const heroBackground = {
-    type: 'image',
-    url: hero
+    type: "image",
+    url: hero,
   };
 
   return (
-    <section className="hero-section" ref={ref} id='home'>
+    <section className="hero-section" ref={ref} id="home">
       <HeroBackground background={heroBackground} />
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -139,7 +138,7 @@ const Hero =  function({ ref }) {
           ))}
         </div> */}
 
-        <motion.div 
+        <motion.div
           className="bottom-logo-strip"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -148,7 +147,6 @@ const Hero =  function({ ref }) {
           {startups.filter(s => s.id !== 'parent').map((startup) => (
             <div key={startup.id} className="bottom-logo">
               <img src={startup.logo} alt={startup.name} />
-              
               <span className="bottom-logo-name" title={startup.name}>{startup.abbr}</span>
             </div>
           ))}
@@ -157,5 +155,3 @@ const Hero =  function({ ref }) {
     </section>
   );
 }
-
-export default Hero;

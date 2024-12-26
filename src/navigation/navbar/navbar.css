@@ -1,15 +1,14 @@
 /* Import a modern font */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 
 .text-logo {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  font-family: 'Raleway', sans-serif; 
-  font-size: 1.8rem; 
+  font-family: "Raleway", sans-serif;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: var(--main-color); 
+  color: var(--main-color);
   position: relative;
 }
 
@@ -19,18 +18,17 @@
 
 .text-content span {
   position: absolute;
-  bottom: -0.5rem; 
+  bottom: -0.5rem;
   right: 0;
   font-size: 1rem;
-  color: var(--red-color); 
+  color: var(--red-color);
   font-style: italic;
 }
 
 .brainstorm-icon {
-  font-size: 2rem; 
-  color: var(--main-color); 
+  font-size: 2rem;
+  color: var(--main-color);
 }
-
 
 .isSticky {
   background-color: #fffffff6;
@@ -46,7 +44,7 @@ header {
   width: 100%;
   top: 0;
   right: 0;
-  /* z-index: 1000; */
+  z-index: 1000;
   position: fixed;
   display: flex;
   /* align-items: center; */
@@ -56,7 +54,9 @@ header {
   transition: all 0.35s ease;
   height: 4.2rem;
   font-family: "poppins" sans-serif;
-
+  background-color: #fffffff6;
+  border-bottom: 1px solid #dedede;
+  /* box-shadow: 1px 1px 10px 1px #dedede; */
   transition: background-color 0.3s ease;
 }
 .logo-container {
@@ -80,17 +80,17 @@ header {
 }
 .inner {
   display: flex;
-  width: 83%;
+  width: 80%;
   justify-content: space-around;
   align-items: center;
 }
-.last {
+/* .last {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 15%;
-}
+} */
 .navlist {
   display: flex;
   justify-content: space-evenly;
@@ -152,7 +152,7 @@ header {
 .navlist a:hover {
   color: var(--main-color);
 }
-.contact {
+/* .contact {
   background: var(--main-color);
   height: 2rem;
   position: relative;
@@ -165,8 +165,8 @@ header {
   outline: 3px solid var(--main-color);
   overflow: hidden;
   transition: color 0.3s 0.1s ease-out;
-}
-.last ul {
+} */
+/* .last ul {
   position: relative;
 }
 .last ul:hover::after {
@@ -179,13 +179,13 @@ header {
   left: 0;
   bottom: -2.5px;
   border: #82a6fa 3px solid;
-  /* background-color: #0c49d8; */
+  background-color: #0c49d8;
   box-shadow: 0 0 1px var(--main-color);
   animation: moveIn, sonar 1s ease-in-out infinite;
 }
 .last .contact a {
   color: #fff;
-}
+} */
 /* .last ul:hover::before {
   content: "";
   z-index: -1;
@@ -284,9 +284,9 @@ header {
     /* margin: .2rem 0; */
   }
   .head-main.open {
-    /* left: 0; */
     right: 0;
     transition: linear 0.2s;
+    justify-content: start;
   }
 }
 @media (width <540px) {
@@ -296,6 +296,15 @@ header {
   .logo-container img {
     width: 75%;
   }
+   .text-logo {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 100px;
+  }
+  .brainstorm-icon {
+    font-size: 2rem;
+    color: var(--main-color);
+  }
 }
 @media (max-width: 992px) {
   .navlist {
@@ -304,8 +313,19 @@ header {
   .navlist a {
     padding: 10px;
   }
+  .head-main {
+    justify-content: end;
+  }
+  .text-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .brainstorm-icon {
+  font-size: 2rem;
+  color: var(--main-color);
+}
 
-  header.sticly {
+  header.stcky {
     padding: 14px 4%;
     transition: 0.2s;
   }
