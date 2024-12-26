@@ -13,7 +13,6 @@ import "../../../pages/home/home.styles.css";
 export default function CoreValue({ Ref }) {
   const [hoveredStartup, setHoveredStartup] = useState(null);
   const [isAnyHovered, setIsAnyHovered] = useState(false);
-
   const startups = [
     {
       id: "parent",
@@ -94,53 +93,42 @@ export default function CoreValue({ Ref }) {
       <div className="container my-5" ref={Ref} id="corevalues">
         <div className="row align-items-center">
           <div className="col-md-12 col-lg-6 mb-4 mb-md-0">
-            <div
-              className={`startup-ecosystem ${isAnyHovered ? "paused" : ""}`}
+             <div className={`startup-ecosystem ${isAnyHovered ? 'paused' : ''}`}>
+          {startups.map((startup) => (
+            <motion.div
+              key={startup.id}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: startup.id === 'parent' ? 0 : 0.2 }}
             >
-              {startups.map((startup) => (
-                <motion.div
-                  key={startup.id}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: startup.id === "parent" ? 0 : 0.2
+              <Magnet>
+                <div 
+                  className={`startup-node ${startup.id} ${startup.id === 'parent' ? 'parent' : ''}`}
+                  onMouseEnter={() => {
+                    setHoveredStartup(startup.id);
+                    setIsAnyHovered(true);
+                  }}
+                  onMouseLeave={() => {
+                    setHoveredStartup(null);
+                    setIsAnyHovered(false);
                   }}
                 >
-                  <Magnet>
-                    <div
-                      className={`startup-node ${startup.id} ${
-                        startup.id === "parent" ? "parent" : ""
-                      }`}
-                      onMouseEnter={() => {
-                        setHoveredStartup(startup.id);
-                        setIsAnyHovered(true);
-                      }}
-                      onMouseLeave={() => {
-                        setHoveredStartup(null);
-                        setIsAnyHovered(false);
-                      }}
+                  <img src={startup.logo} alt={startup.name} className="startup-logo" />
+                  {hoveredStartup === startup.id && (
+                    <motion.div 
+                      className="startup-description"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3 }}
                     >
-                      <img
-                        src={startup.logo}
-                        alt={startup.name}
-                        className="startup-logo"
-                      />
-                      {hoveredStartup === startup.id && (
-                        <motion.div
-                          className="startup-description"
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <h3>{startup.name}</h3>
-                        </motion.div>
-                      )}
-                    </div>
-                  </Magnet>
-                </motion.div>
-              ))}
-            </div>
+                      <h3>{startup.name}</h3>
+                    </motion.div>
+                  )}
+                </div>
+              </Magnet>
+            </motion.div>
+          ))}
+        </div>
           </div>
           <div className="col-md-12 col-lg-6 mb-4 mb-md-0">
             <h1 className="mb-4 core-values-title">Core <span>Values</span></h1>
@@ -197,21 +185,21 @@ export default function CoreValue({ Ref }) {
               <div className="value-row">
                 <span className="value-letter core-values-letter">O</span>
                 <span className="core-values-text">
-                  <span>Operational Excellence</span> - We automate and continuously improve
+                  Operational Excellence - We automate and continuously improve
                   our internal processes to promote efficiency.
                 </span>
               </div>
               <div className="value-row">
                 <span className="value-letter core-values-letter">R</span>
                 <span className="core-values-text">
-                  <span>Resourcefulness</span> - We thrive by finding innovative solutions to
+                  Resourcefulness - We thrive by finding innovative solutions to
                   problems using available resources
                 </span>
               </div>
               <div className="value-row">
                 <span className="value-letter core-values-letter">M</span>
                 <span className="core-values-text">
-                  <span>Mentorship</span> - Provide technology and Business mentorship to
+                  Mentorship - Provide technology and Business mentorship to
                   talented youth irrespective of background
                 </span>
               </div>
