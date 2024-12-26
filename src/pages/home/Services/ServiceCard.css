@@ -8,7 +8,7 @@
 }
 
 .service-card:hover {
-  background-color: rgba(0, 123, 255, 0.2); /* Darker on hover */
+  /* background-color: rgba(0, 123, 255, 0.2); Darker on hover */
   color: #007bff; /* Primary text color */
 }
 

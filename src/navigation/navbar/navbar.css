@@ -1,3 +1,37 @@
+/* Import a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+
+.text-logo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-family: 'Raleway', sans-serif; 
+  font-size: 1.8rem; 
+  font-weight: bold;
+  color: var(--main-color); 
+  position: relative;
+}
+
+.text-content {
+  position: relative;
+}
+
+.text-content span {
+  position: absolute;
+  bottom: -0.5rem; 
+  right: 0;
+  font-size: 1rem;
+  color: var(--red-color); 
+  font-style: italic;
+}
+
+.brainstorm-icon {
+  font-size: 2rem; 
+  color: var(--main-color); 
+}
+
+
 .isSticky {
   background-color: #fffffff6;
   border-bottom: 1px solid #dedede;
@@ -27,19 +61,6 @@ header {
 }
 .logo-container {
   width: 15%;
-}
-.text-logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--main-color); 
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.text-logo span {
-  color: var(--red-color);
-  font-style: italic;
 }
 
 .logo-container a {

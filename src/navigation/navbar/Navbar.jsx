@@ -3,6 +3,7 @@ import "./navbar.css";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { FaLightbulb, FaReact } from "react-icons/fa";
 // import {FaSearch } from 'react-icons/fa';
 
 export default function Navbar({ sectionRefs }) {
@@ -59,10 +60,14 @@ export default function Navbar({ sectionRefs }) {
       <header className={`navbar ${isSticky ? "isSticky" : ""}`}>
         <div className="header">
           <div className="logo-container">
-            <NavLink to="/" className="ps-5 pt-2">
-              <h4 className="text-logo">
-                Brainstorm <span>Group</span>
-              </h4>
+            <NavLink to="/" className=" pt-2">
+              <div className="text-logo">
+                <FaLightbulb className="brainstorm-icon" />
+                <div className="text-content">
+                  Brainstorm
+                  <span>Group</span>
+                </div>
+              </div>
               {/* <img src={Logo} alt="Brainstorm" fetchpriority="high" /> */}
             </NavLink>
           </div>
