@@ -1,12 +1,13 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import React, { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { SkeletonTheme } from "react-loading-skeleton";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Home from "./pages/home/home";
 import Navbar from "./navigation/navbar/Navbar";
 import Footer from "./navigation/footer/Footer";
+import Portfolio from './pages/portfolio/Portfolio.jsx';
 // import Home from "../home/home.jsx"
 // import Contact from '../contact/Contact.js'
 // import Blog from "../blog/Blogs.jsx"
@@ -56,6 +57,7 @@ export default function AppNavigation() {
               </>
             }
           />
+          <Route path="/portfolio" element={<Portfolio />} />
           {/* <Route path="/blog" element={<Blog />} />
           <Route path="/blog/blog_details/:id" element={<BlogDetails />} />
           <Route path="/contact" element={<Contact />} />

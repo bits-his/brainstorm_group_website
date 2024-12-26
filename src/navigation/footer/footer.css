@@ -4,6 +4,7 @@ footer {
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
+  margin-top: auto;
 }
 /* .main-footer {
   position: relative;

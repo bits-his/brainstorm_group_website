@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./navbar.css";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import PropTypes from 'prop-types';
 // import {FaSearch } from 'react-icons/fa';
 
 export default function Navbar({ sectionRefs }) {
@@ -63,7 +64,7 @@ export default function Navbar({ sectionRefs }) {
         <div className="header">
           <div className="logo-container">
             <NavLink to="/" className="logo-">
-              <img src={Logo} alt="Brainstorm" fetchpriority="high" />
+              <img src={Logo} alt="Brainstorm" fetchPriority="high" />
             </NavLink>
           </div>
           <div className={`head-main ${isMenuOpen ? "open" : ""}`}>
@@ -123,6 +124,9 @@ export default function Navbar({ sectionRefs }) {
                     Teams
                   </a>
                 </li>
+                <li>
+                  <NavLink to="/portfolio">Portfolio</NavLink>
+                </li>
 
                 {/* <li>
             <a href="#blog" className={activeSection === 'blog' ? 'active' : ''}>
@@ -150,3 +154,7 @@ export default function Navbar({ sectionRefs }) {
     </>
   );
 }
+
+Navbar.propTypes = {
+  sectionRefs: PropTypes.objectOf(PropTypes.object).isRequired
+};

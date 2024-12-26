@@ -1,0 +1,107 @@
+.portfolio-container {
+    padding: 2rem;
+    margin-top: 4.2rem;
+  }
+  
+  .portfolio-sidebar {
+    position: sticky;
+    top: 5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .portfolio-sidebar h3 {
+    color: #150df6;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .startup-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .startup-menu li {
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .startup-menu li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .startup-menu li.active a {
+    background: #150df6;
+    color: white;
+  }
+  
+  .startup-menu li:hover a {
+    background: #e9ecef;
+    color: #150df6;
+  }
+  
+  .startup-menu li.active:hover a {
+    background: #150df6;
+    color: white;
+  }
+  
+  .portfolio-content {
+    padding: 0 1rem;
+  }
+  
+  .startup-section {
+    min-height: 100vh;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .startup-section h2 {
+    color: #150df6;
+    margin-bottom: 1rem;
+  }
+  
+  .startup-section p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .visit-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #150df6;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .visit-button:hover {
+    background: #0e0ab0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .portfolio-sidebar {
+      position: relative;
+      top: 0;
+      margin-bottom: 2rem;
+    }
+    
+    .startup-section {
+      min-height: auto;
+      padding: 1.5rem;
+    }
+  }
