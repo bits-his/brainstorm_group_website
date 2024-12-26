@@ -1,54 +1,51 @@
-import React from "react";
+import { TbEye } from "react-icons/tb"; 
 import img from "../../../assets/DSC_0701.jpg";
-import { FaMobile, FaPuzzlePiece } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 export default function AboutUs({ Ref }) {
   return (
     <>
-      <div className="container my-5" ref={Ref} id="about">
+      <div className="px-5 my-5" ref={Ref} id="about">
         <div className="row align-items-center">
           <div className="col-md-12 col-lg-6 mb-4 mb-md-0">
             <h1 className="mb-4">About Us</h1>
             <p className="mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
-              incidunt magnam corrupti, odit eos harum quaerat nostrum
-              voluptatibus aspernatur eligendi accusantium cum, impedit
-              blanditiis voluptate commodi doloribus, nemo dignissimos
-              recusandae.
+              Brainstorm Group is a group of companies that provide a range of
+              services to businesses and individuals.This is also a medium for
+              us to incubate and accelerate innovative ideas into successful
+              companies and provide technology solutions for Public, and Private
+              Sectors.
             </p>
             <div className="row mb-md-4">
               <div className="col-md-6">
-                <FaMobile
+                <TbEye
                   size={40}
                   fontWeight="bold"
                   color="gray"
                   className="mb-2"
                 />
-                <h5 className="mb-2">Web Specialties</h5>
+                <h5 className="mb-2">Mission</h5>
                 <p className="small mb-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Perferendis quis consect.
+                  To attain global reputation for providing easy to use,
+                  innovative, and problem solving technology solutions for
+                  Public, and Private Sectors.
                 </p>
-                <Link to="#" className="text-primary text-decoration-none">
-                  Learn More
-                </Link>
               </div>
               <div className="col-md-6">
-                <FaPuzzlePiece
+                <TbEye
                   size={40}
                   fontWeight="bold"
                   color="gray"
                   className="mb-2"
                 />
-                <h5 className="mb-2">Intuitive Thinkers</h5>
+                <h5 className="mb-2">Vision</h5>
                 <p className="small mb-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Perferendis quis.
+                  We incubate and accelerate innovative ideas into successful
+                  companies and provide technology solutions for Public, and
+                  Private Sectors.
                 </p>
-                <Link to="#" className="text-primary">
+                {/* <Link to="#" className="text-primary">
                   Learn More
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

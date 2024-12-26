@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './portfolio.styles.css';
+import ListCard from '../home/CoreValues/component/ListCard';
 
 export default function Portfolio({ refi }) {
   const [activeStartup, setActiveStartup] = useState('solutions');
@@ -11,43 +12,142 @@ export default function Portfolio({ refi }) {
       id: 'solutions',
       name: 'Brainstorm IT Solutions',
       description: 'A leading IT solutions provider specializing in custom software development, web applications, and digital transformation services.',
-      link: 'https://brainstorm.ng'
+      link: 'https://brainstorm.ng',
+      list:[
+        {
+            name:'Web Development',
+            description:'We build custom websites for businesses and individuals, ensuring they are responsive, secure, and optimized for performance.'
+        },
+        {
+            name:'Software Development',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Digital Transformation',
+            description:'We help businesses modernize their operations and improve their digital capabilities, ensuring they are efficient, secure, and optimized for performance.'
+        }
+    ]
     },
     {
       id: 'likita',
       name: 'My Likita',
       description: 'Healthcare management system that connects patients with healthcare providers, enabling easy access to medical services.',
-      link: 'https://mylikita.com'
+      link: 'https://mylikita.com',
+      list:[
+        {
+            name:'Healthcare Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Patient Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Appointment Scheduling',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        }
+
+    ]
     },
     {
       id: 'elite',
       name: 'Elite School App',
       description: 'Comprehensive school management system that streamlines educational processes and enhances communication between schools and parents.',
-      link: 'https://elscholar.ng'
+      link: 'https://elscholar.ng',
+      list:[
+        {
+            name:'School Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Student Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Parent Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        }
+    ]
     },
     {
       id: 'inventria',
       name: 'Inventria',
       description: 'Advanced inventory management system for businesses to track and optimize their stock levels efficiently.',
-      link: 'https://inventria-new.netlify.app'
+      link: 'https://inventria-new.netlify.app',
+      list:[
+        {
+            name:'Inventory Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Reporting',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Sales Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        }
+    ]
     },
     {
       id: 'bitcoops',
       name: 'Bitcoops',
       description: 'Digital platform for cooperative societies to manage their operations and member transactions seamlessly.',
-      link: 'https://www.bitcoops.com'
+      link: 'https://www.bitcoops.com',
+      list:[
+        {
+            name:'Cooperative Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Member Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Transaction Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        }
+    ]
     },
     {
       id: 'kasuwa',
       name: 'Kasuwa Mall',
       description: 'E-commerce platform connecting local vendors with customers, providing a seamless shopping experience.',
-      link: 'https://kasuwamall.com'
+      link: 'https://kasuwamall.com',
+      list:[
+        {
+            name:'E-commerce',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Vendor Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Customer Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        }
+    ]
     },
     {
       id: 'knowtify',
       name: 'Knowtify',
       description: 'Educational technology platform providing interactive learning experiences and knowledge sharing.',
-      link: 'https://www.knowtify.com.ng'
+      link: 'https://www.knowtify.com.ng',
+      list:[
+        {
+            name:'Disaster Management',
+            description:'We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Early Warning System',
+            description:'Early warning system for disasters and emergencies, ensuring they are efficient, secure, and optimized for performance.'
+        },
+        {
+            name:'Location Based Services',
+            description:'Location based services for disasters and emergencies, ensuring they are efficient, secure, and optimized for performance.'
+        }
+    ]
     }
   ];
 
@@ -105,6 +205,12 @@ export default function Portfolio({ refi }) {
               >
                 <h2>{startup.name}</h2>
                 <p>{startup.description}</p>
+
+                {startup.list.map((item, index) => (
+                    <div key={index} >
+                        <ListCard name={item.name} description={item.description} />
+                    </div>
+                ))}
                 <a 
                   href={startup.link} 
                   target="_blank" 

@@ -1,24 +1,19 @@
-
-export default function ListCard() {
+export default function ListCard({ name, description }) {
   return (
     <div>
       {/* list card */}
-      <div className="col-md-4 position-relative mb-4">
-            <div className="dots-pattern"></div>
-            <h3 className="text-primary mb-3">Scale</h3>
-            <ul className="list-unstyled text-start">
-              <li>
-                <i className="text-success me-2">✔</i>Social Media
-              </li>
-              <li>
-                <i className="text-success me-2">✔</i>Paid Campaigns
-              </li>
-              <li>
-                <i className="text-success me-2">✔</i>Marketing & SEO
-              </li>
-        </ul>
+      <div className="position-relative mb-4">
+        <div className="dots-pattern"></div>
+        <h3 className="text-primary mb-3">{name}</h3>
+        <div className="row">
+          <ul className=" col-md-4 col-sm-4  text-start ">
+            <li className="">
+              <i className="text-success me-2">✔</i>
+              {description}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
 }
-

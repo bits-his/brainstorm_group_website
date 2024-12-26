@@ -10,8 +10,8 @@ export default function Home({ sections }) {
     <>
       <Hero ref={sections.home} />
       <AboutUs  id="about" Ref={sections.about} />
-      <Services id="services" refi={sections.services} />
       <CoreValue id="corevalues" refi={sections.corevalues} />
+      <Services id="services" refi={sections.services} />
       <Portfolio id="portfolio" refi={sections.portfolio} />
       {/* <Team id="team" refi={sections.team} /> */}
       {/* <Contact id="contact" refi={sections.contact} /> */}

@@ -2,12 +2,12 @@
 import { motion } from "framer-motion";
 // import Magnet from './Magnet';
 import logo from "../../../assets/logo.png";
-import mylikita from "../../../assets/logos/1.jpg";
-import elite from "../../../assets/logos/2.jpg";
+import mylikita from "../../../assets/logos/mlt.png";
+import elite from "../../../assets/logos/elite.png";
 import inventria from "../../../assets/logos/inv.png";
 import bitcoops from "../../../assets/logos/bit-removebg-preview.png";
-import kasuwa from "../../../assets/logos/KASUWAMALL__2_-removebg-preview.png";
-import knowtify from "../../../assets/logos/knowtify.png";
+import kasuwa from "../../../assets/logos/kasuwa-removebg-preview.png";
+import knowtify from "../../../assets/logos/knowtify copy.png";
 import hero from "../../../assets/hero.jpg";
 import "../../../pages/home/home.styles.css";
 import PropTypes from "prop-types";
