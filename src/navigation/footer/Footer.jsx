@@ -6,10 +6,9 @@ import call from "../../assets/call.webp";
 // import message from "../../assets/logos/message.webp";
 import "./footer.css";
 import { IoLogoFacebook } from "react-icons/io5";
-import { FaTwitter } from "react-icons/fa";
+import { FaLightbulb, FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaMailBulk } from "react-icons/fa";
-
 
 export default function Footer() {
   const date = new Date().getFullYear();
@@ -30,8 +29,15 @@ export default function Footer() {
             <div className="row">
               <div className="col-12 col-sm-12 col-md-12 ps-sm-5 col-lg-3 col-xl-3">
                 <div className="single-footer-widget">
-                  <Link to="/">
-                    <img src={Logo} alt="Logo" className="logo mb-4" />
+                  <Link to="/" className="mb-4">
+                    <div className="text-logo">
+                      <FaLightbulb className="brainstorm-icon" />
+                      <div className="text-content">
+                        Brainstorm
+                        <span>Group</span>
+                      </div>
+                    </div>
+                    {/* <img src={Logo} alt="Logo" className="logo mb-4" /> */}
                   </Link>
 
                   <p>

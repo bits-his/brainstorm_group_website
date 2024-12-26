@@ -1,0 +1,39 @@
+/* This file contains the external CSS styles for the ServiceCard component, applying styles consistent with Reactstrap. */
+
+.service-card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  /* background-color: rgba(0, 123, 25  5, 0.1); Light primary background */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.service-card:hover {
+  /* background-color: rgba(0, 123, 255, 0.2); Darker on hover */
+  color: #007bff; /* Primary text color */
+}
+
+.service-card-icon {
+  display: inline-flex;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgba(0, 123, 255, 0.1); /* Light primary background */
+}
+
+.service-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.service-card-description {
+  color: #6c757d; /* Muted text color */
+}
+
+.service-card-link {
+  display: inline-block;
+  color: #007bff; /* Primary link color */
+  text-decoration: none;
+}
+
+.service-card-link:hover {
+  text-decoration: underline;
+}

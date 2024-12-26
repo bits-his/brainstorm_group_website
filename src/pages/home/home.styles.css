@@ -9,13 +9,12 @@
   position: relative;
   width: 100%;
   min-height: calc(100vh - 4.2rem);
-  margin-top: 4.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .hero-background {

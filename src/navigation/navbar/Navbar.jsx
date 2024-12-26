@@ -4,6 +4,7 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import PropTypes from 'prop-types';
+import { FaLightbulb, FaReact } from "react-icons/fa";
 // import {FaSearch } from 'react-icons/fa';
 
 export default function Navbar({ sectionRefs }) {
@@ -31,9 +32,6 @@ export default function Navbar({ sectionRefs }) {
       { threshold: 0.5 }
     );
 
-    // Object.values(sectionRefs).forEach((ref) => {
-    //   observer.observe(ref.current);
-    // });
     Object.keys(sectionRefs).forEach((key) => {
       if (sectionRefs[key].current) {
         observer.observe(sectionRefs[key].current);
@@ -60,11 +58,18 @@ export default function Navbar({ sectionRefs }) {
   return (
     <>
       {/* {JSON.stringify(activeSection)} */}
-      <header className={` ${isSticky ? "isSticky" : ""}`}>
+      <header className={`navbar ${isSticky ? "isSticky" : ""}`}>
         <div className="header">
           <div className="logo-container">
-            <NavLink to="/" className="logo-">
-              <img src={Logo} alt="Brainstorm" fetchPriority="high" />
+            <NavLink to="/" className=" pt-2">
+              <div className="text-logo">
+                <FaLightbulb className="brainstorm-icon" />
+                <div className="text-content">
+                  Brainstorm
+                  <span>Group</span>
+                </div>
+              </div>
+              {/* <img src={Logo} alt="Brainstorm" fetchpriority="high" /> */}
             </NavLink>
           </div>
           <div className={`head-main ${isMenuOpen ? "open" : ""}`}>
@@ -107,6 +112,20 @@ export default function Navbar({ sectionRefs }) {
                     href="#services"
                     className={activeSection === "services" ? "active" : ""}
                   >
+                    Services
+                  </a>
+                </li>
+                <li
+                  onClick={
+                    location.pathname === "/blog#portfolio"
+                      ? null
+                      : () => navigate("/#portfolio")
+                  }
+                >
+                  <a
+                    href="#portfolio"
+                    className={activeSection === "portfolio" ? "active" : ""}
+                  >
                     Our portfolio
                   </a>
                 </li>
@@ -135,13 +154,13 @@ export default function Navbar({ sectionRefs }) {
           </li> */}
               </ul>
             </div>
-            <div className="last" onClick={handleMenuClick}>
+            {/* <div className="last" onClick={handleMenuClick}>
               <ul>
                 <li className="contact" onClick={() => setActiveSection("")}>
                   <NavLink to="/contact">Contact</NavLink>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           <div className="header-icons">
