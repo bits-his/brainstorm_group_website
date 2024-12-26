@@ -7,10 +7,10 @@
 
 .team-left {
     background-color: #076ACD;
-    color: white;
+    color: #dcdcdc;
     border-radius: 10px;
     padding: 30px;
-    height: 100vh;
+    height: 70vh;
     position: sticky;
     top: 5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -50,7 +50,6 @@
 
 .team-member {
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -90,4 +89,10 @@
 
 .social-icons a:hover {
     color: #555;
+}
+
+@media screen and (max-width: 900px) {
+    .team-left {
+        position: static;
+    }
 }
