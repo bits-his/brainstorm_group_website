@@ -58,7 +58,7 @@ export default function Navbar({ sectionRefs }) {
   return (
     <>
       {/* {JSON.stringify(activeSection)} */}
-      <header className={`navbar ${isSticky ? "isSticky" : ""}`}>
+      <header className={`${isSticky ? "isSticky" : ""}`}>
         <div className="header">
           <div className="logo-container">
             <NavLink to="/" className=" pt-2">
@@ -126,7 +126,7 @@ export default function Navbar({ sectionRefs }) {
                     href="#portfolio"
                     className={activeSection === "portfolio" ? "active" : ""}
                   >
-                    Our portfolio
+                   portfolio
                   </a>
                 </li>
                 <li
@@ -143,9 +143,21 @@ export default function Navbar({ sectionRefs }) {
                     Teams
                   </a>
                 </li>
-                <li>
-                  <NavLink to="/portfolio">Portfolio</NavLink>
+                <li
+                  onClick={
+                    location.pathname === "/blog#bihub"
+                      ? null
+                      : () => navigate("/#bihub")
+                  }
+                >
+                  <a
+                    href="#bihub"
+                    className={activeSection === "bihub" ? "active" : ""}
+                  >
+                    Contact
+                  </a>
                 </li>
+                
 
                 {/* <li>
             <a href="#blog" className={activeSection === 'blog' ? 'active' : ''}>

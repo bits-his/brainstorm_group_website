@@ -1,43 +1,37 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState } from "react";
+import { motion } from "framer-motion";
 // import Magnet from './Magnet';
-import logo from '../../../assets/logo.png';
-import hero from '../../../assets/hero.jpg';
-import '../../../pages/home/home.styles.css';
-import PropTypes from 'prop-types';
+import logo from "../../../assets/logo.png";
+import hero from "../../../assets/hero.jpg";
+import "../../../pages/home/home.styles.css";
+import PropTypes from "prop-types";
 
 const HeroBackground = ({ background }) => {
   if (!background) {
-    return <div className="hero-background default" />; 
+    return <div className="hero-background default" />;
   }
 
-  if (background.type === 'video') {
+  if (background.type === "video") {
     return (
       <div className="hero-background">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="background-video"
-        >
+        <video autoPlay loop muted playsInline className="background-video">
           <source src={background.url} type="video/mp4" />
         </video>
       </div>
     );
   }
 
-  if (background.type === 'image') {
+  if (background.type === "image") {
     return (
-      <div 
+      <div
         className="hero-background"
-        style={{ 
+        style={{
           backgroundImage: `url(${background.url})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          filter: 'brightness(0.9)',
-          transition: 'all 0.3s ease-in-out'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          filter: "brightness(0.9)",
+          transition: "all 0.3s ease-in-out",
         }}
       />
     );
@@ -48,37 +42,42 @@ const HeroBackground = ({ background }) => {
 
 HeroBackground.propTypes = {
   background: PropTypes.shape({
-    type: PropTypes.oneOf(['video', 'image']),
-    url: PropTypes.string
-  })
+    type: PropTypes.oneOf(["video", "image"]),
+    url: PropTypes.string,
+  }),
 };
 
-const Hero =  function({ ref }) {
+export default function Hero({ ref }) {
   const [hoveredStartup, setHoveredStartup] = useState(null);
   const [isAnyHovered, setIsAnyHovered] = useState(false);
 
   const startups = [
-    { id: 'parent', name: 'Brainstorm Group', logo: logo, abbr: 'BG' },
-    { id: 'solutions', name: 'Brainstorm IT Solutions', logo: logo, abbr: 'BIS' },
-    { id: 'likita', name: 'My Likita', logo: logo, abbr: 'ML' },
-    { id: 'elite', name: 'Elite School App', logo: logo, abbr: 'ESA' },
-    { id: 'inventria', name: 'Inventria', logo: logo, abbr: 'INV' },
-    { id: 'bitcoops', name: 'Bitcoops', logo: logo, abbr: 'BC' },
-    { id: 'kasuwa', name: 'Kasuwa Mall', logo: logo, abbr: 'KM' },
-    { id: 'knowtify', name: 'Knowtify', logo: logo, abbr: 'KN' }
+    { id: "parent", name: "Brainstorm Group", logo: logo, abbr: "BG" },
+    {
+      id: "solutions",
+      name: "Brainstorm IT Solutions",
+      logo: logo,
+      abbr: "BIS",
+    },
+    { id: "likita", name: "My Likita", logo: logo, abbr: "ML" },
+    { id: "elite", name: "Elite School App", logo: logo, abbr: "ESA" },
+    { id: "inventria", name: "Inventria", logo: logo, abbr: "INV" },
+    { id: "bitcoops", name: "Bitcoops", logo: logo, abbr: "BC" },
+    { id: "kasuwa", name: "Kasuwa Mall", logo: logo, abbr: "KM" },
+    { id: "knowtify", name: "Knowtify", logo: logo, abbr: "KN" },
   ];
 
   // Example background config
   const heroBackground = {
-    type: 'image',
-    url: hero
+    type: "image",
+    url: hero,
   };
 
   return (
-    <section className="hero-section" ref={ref} id='home'>
+    <section className="hero-section" ref={ref} id="home">
       <HeroBackground background={heroBackground} />
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -92,7 +91,7 @@ const Hero =  function({ ref }) {
         >
           Brainstorm Group
         </motion.h1>
-        
+
         {/* Corevalue Component  */}
         {/* <div className={`startup-ecosystem ${isAnyHovered ? 'paused' : ''}`}>
           {startups.map((startup) => (
@@ -131,22 +130,24 @@ const Hero =  function({ ref }) {
           ))}
         </div> */}
 
-        <motion.div 
+        <motion.div
           className="bottom-logo-strip"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          {startups.filter(s => s.id !== 'parent').map((startup) => (
-            <div key={startup.id} className="bottom-logo">
-              <img src={startup.logo} alt={startup.name} />
-              <span className="bottom-logo-name" title={startup.name}>{startup.abbr}</span>
-            </div>
-          ))}
+          {startups
+            .filter((s) => s.id !== "parent")
+            .map((startup) => (
+              <div key={startup.id} className="bottom-logo">
+                <img src={startup.logo} alt={startup.name} />
+                <span className="bottom-logo-name" title={startup.name}>
+                  {startup.abbr}
+                </span>
+              </div>
+            ))}
         </motion.div>
       </motion.div>
     </section>
   );
 }
-
-export default Hero;
