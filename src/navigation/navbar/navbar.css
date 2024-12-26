@@ -244,6 +244,9 @@ header {
     justify-content: center;
     align-items: center;
   }
+  .logo-container {
+    width: 30%;
+  }
   #menu-icon {
     cursor: pointer;
     display: flex;
@@ -293,16 +296,22 @@ header {
   .header-icons {
     justify-content: flex-start;
   }
-  .logo-container img {
-    width: 75%;
+  .logo-container {
+    width: 40%;
   }
-   .text-logo {
-    font-size: 1rem;
+  /* .logo-container {
+    width: 50%;
+  } */
+  /* .logo-container{
+    width: 30%;
+       } */
+  .text-logo {
+    font-size: 0.8rem;
     font-weight: bold;
-    margin-left: 100px;
+    width: 100%;
   }
   .brainstorm-icon {
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: var(--main-color);
   }
 }
@@ -321,9 +330,9 @@ header {
     font-weight: bold;
   }
   .brainstorm-icon {
-  font-size: 2rem;
-  color: var(--main-color);
-}
+    font-size: 2rem;
+    color: var(--main-color);
+  }
 
   header.stcky {
     padding: 14px 4%;
