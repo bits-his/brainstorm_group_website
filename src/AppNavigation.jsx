@@ -29,6 +29,7 @@ export default function AppNavigation() {
     home: useRef(),
     clients: useRef(),
     services: useRef(),
+    portfolio: useRef(),
     bihub: useRef(),
     about: useRef(),
     products: useRef(),
@@ -54,6 +55,7 @@ export default function AppNavigation() {
               <>
                 {navigateToHome()}
                 <Home sections={sectionRefs} />
+                
               </>
             }
           />

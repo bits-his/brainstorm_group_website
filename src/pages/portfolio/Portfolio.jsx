@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './portfolio.styles.css';
 
-export default function Portfolio() {
+export default function Portfolio({ refi }) {
   const [activeStartup, setActiveStartup] = useState('solutions');
   const startupRefs = useRef({});
 
@@ -71,7 +71,7 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div className="portfolio-container">
+    <div className="portfolio-container" ref={refi} id='portfolio'>
       <div className="row">
         {/* Sidebar Menu - 3 columns */}
         <div className="col-md-3">

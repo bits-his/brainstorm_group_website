@@ -12,11 +12,19 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.3.2",
+<<<<<<< HEAD
     "framer-motion": "^11.15.0",
     "lucide-react": "^0.469.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.9.2",
     "react-dom": "^18.3.1",
+=======
+    "lucide": "^0.469.0",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.9.2",
+    "react-dom": "^18.3.1",
+    "react-icon": "^1.0.0",
+>>>>>>> 2f1a039da9fe9572918d585f3e9d10119afd8a79
     "react-icons": "^5.0.1",
     "react-loading-skeleton": "^3.4.0",
     "react-owl-carousel": "^2.3.3",
