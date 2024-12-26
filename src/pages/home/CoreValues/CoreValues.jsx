@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Magnet from "../Magnet";
 import logo from "../../../assets/logo.png";
 import mylikita from "../../../assets/logos/mlt.png";
+import brainstormgroup from "../../../assets/logos/brainstorm group.png";
 import elite from "../../../assets/logos/elite.png";
 import inventria from "../../../assets/logos/inv.png";
 import bitcoops from "../../../assets/logos/bit-removebg-preview.png";
@@ -17,7 +18,7 @@ export default function CoreValue({ Ref }) {
     {
       id: "parent",
       name: "Brainstorm Group",
-      logo: logo,
+      logo: brainstormgroup,
       abbr: "BG",
       link: "https://brainstormgroup.com",
       description:

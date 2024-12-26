@@ -4,10 +4,10 @@ import {
   // FaFacebookF,
   FaInstagram,
   FaLinkedin,
-  FaMailBulk,
+  FaMailBulk
   // FaTwitter,
 } from "react-icons/fa";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const teamMembers = [
   {
@@ -16,7 +16,7 @@ const teamMembers = [
     role: "GROUP CEO",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: ""
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const teamMembers = [
     role: "GROUP CTO",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: ""
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const teamMembers = [
     role: "Head Cooperative Services",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: ""
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const teamMembers = [
     role: "Group Head of Operations",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: ""
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const teamMembers = [
     role: "Group Finance Manager",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: ""
   },
   {
     id: 6,
@@ -56,8 +56,40 @@ const teamMembers = [
     role: "Partner CEO Mylikita",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: ""
   },
+  {
+    id: 7,
+    name: "Ibrahim Abdulahi",
+    role: "Partner CEO Inventria",
+    description:
+      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+    image: ""
+  },
+  {
+    id: 8,
+    name: "Ibrahim Abdulahi",
+    role: "Partner CEO Knowtify",
+    description:
+      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+    image: ""
+  },
+  {
+    id: 9,
+    name: "Ibrahim Abdulahi",
+    role: "Partner CEO Bitcoops",
+    description:
+      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+    image: ""
+  },
+  {
+    id: 10,
+    name: "Ibrahim Abdulahi",
+    role: "Partner CEO Kasuwa Mall",
+    description:
+      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+    image: ""
+  }
 ];
 
 export default function Teams({ Ref }) {
@@ -89,7 +121,7 @@ export default function Teams({ Ref }) {
                   <FaInstagram />
                 </a>
               </div>
-              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
