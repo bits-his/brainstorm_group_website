@@ -137,8 +137,8 @@ export default function Navbar({ sectionRefs }) {
                   }
                 >
                   <a
-                    href="#bihub"
-                    className={activeSection === "bihub" ? "active" : ""}
+                    href="#teams"
+                    className={activeSection === "teams" ? "active" : ""}
                   >
                     Teams
                   </a>

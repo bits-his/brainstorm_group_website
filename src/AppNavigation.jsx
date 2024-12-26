@@ -32,6 +32,7 @@ export default function AppNavigation() {
     portfolio: useRef(),
     bihub: useRef(),
     about: useRef(),
+    teams: useRef(),
     products: useRef(),
     blog: useRef(),
   };
