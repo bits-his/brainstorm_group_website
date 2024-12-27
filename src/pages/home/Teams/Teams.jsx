@@ -110,13 +110,13 @@ const teamMembers = [
 export default function Teams({ Ref }) {
   return (
     <div>
-      <div className="services-header">
-        <h2 className="services-title">
-          Our <span>Team</span>
-        </h2>
-      </div>
       <div className="team-container" ref={Ref} id="teams">
         <div className="row">
+          <div className="services-header">
+            <h2 className="services-title">
+              Our <span>Team</span>
+            </h2>
+          </div>
           <div className="team-left col-lg-4 col-md-12">
             <h2>Our Team</h2>
             <p>
@@ -124,9 +124,9 @@ export default function Teams({ Ref }) {
               nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
-          <div className="team-right col-lg-8 col-md-12 mt-5 mt-md-0">
+          <div className="team-right col-lg-8 col-md-12 d-flex">
             {teamMembers.map((member) => (
-              <motion.div className="team-member" key={member.id}>
+              <motion.div className="team-member col-md-6 col-sm-12" key={member.id}>
                 <img src={member.image} alt={member.name} />
                 <h3>{member.name}</h3>
                 <p>{member.role}</p>

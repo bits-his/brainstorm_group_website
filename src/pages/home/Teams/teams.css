@@ -10,7 +10,7 @@
     color: #dcdcdc;
     border-radius: 10px;
     padding: 30px;
-    height: 70vh;
+    height: 84vh;
     position: sticky;
     top: 5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -46,6 +46,7 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 0 20px;
+    /* margin-top: 5rem; */
 }
 
 .team-member {
@@ -91,8 +92,12 @@
     color: #555;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 991px) {
     .team-left {
         position: static;
+    }
+    .team-right {
+        margin-top: 2rem;
+        padding: 0;
     }
 }
