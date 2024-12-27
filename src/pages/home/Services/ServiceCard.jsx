@@ -9,7 +9,7 @@ export function ServiceCard({ title, description, icon: Icon, href }) {
         <Icon className="w-6 h-6" />
       </div>
       <div className="service-card-title">
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <h3 className="text-xl fw-bold">{title}</h3>
         <p className="service-card-description">{description}</p>
       </div>
       <Link href={href} className="service-card-link">

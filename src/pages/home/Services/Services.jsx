@@ -64,7 +64,7 @@ export default function Services({ refi }) {
           <h2 className="services-title">
             Our <span>Services</span>
           </h2>
-          <p className="services-subtitle">
+          <p className="services-subtitle ">
             Explore our wide range of solutions tailored for your needs.
           </p>
         </div>

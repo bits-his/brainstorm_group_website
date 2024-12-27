@@ -1,23 +1,35 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-#root{
-     font-family: "Quicksand", serif;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+#root {
+  font-family: "Quicksand", serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
 }
 
 .dots-pattern {
-    position: absolute;
-    top: -20px;
-    left: 20%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 120px;
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 5px);
-    background-size: 25px 25px;
-    z-index: -1;
-  }
-  .text-primary {
-    color: #00bcd4 !important;
-  }
-  .text-success {
-    color: #28a745 !important;
-  }
+  position: absolute;
+  top: -20px;
+  left: 20%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 5px
+  );
+  background-size: 25px 25px;
+  z-index: -1;
+}
+.text-primary {
+  color: #00bcd4 !important;
+}
+.text-success {
+  color: #28a745 !important;
+}

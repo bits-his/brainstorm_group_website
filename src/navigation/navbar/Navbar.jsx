@@ -126,14 +126,14 @@ export default function Navbar({ sectionRefs }) {
                     href="#portfolio"
                     className={activeSection === "portfolio" ? "active" : ""}
                   >
-                   portfolio
+                    portfolio
                   </a>
                 </li>
                 <li
                   onClick={
-                    location.pathname === "/blog#bihub"
+                    location.pathname === "/blog#teams"
                       ? null
-                      : () => navigate("/#bihub")
+                      : () => navigate("/#teams")
                   }
                 >
                   <a
@@ -145,19 +145,18 @@ export default function Navbar({ sectionRefs }) {
                 </li>
                 <li
                   onClick={
-                    location.pathname === "/blog#bihub"
+                    location.pathname === "/blog#contact"
                       ? null
-                      : () => navigate("/#bihub")
+                      : () => navigate("/#contact")
                   }
                 >
                   <a
-                    href="#bihub"
-                    className={activeSection === "bihub" ? "active" : ""}
+                    href="#contact"
+                    className={activeSection === "contact" ? "active" : ""}
                   >
                     Contact
                   </a>
                 </li>
-                
 
                 {/* <li>
             <a href="#blog" className={activeSection === 'blog' ? 'active' : ''}>
