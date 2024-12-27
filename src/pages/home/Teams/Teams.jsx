@@ -8,6 +8,13 @@ import {
   // FaTwitter,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import murtala from "../../../assets/team/murtala123.png";
+// import dangana from "../../assets/team/mr-dangana.png";
+// import mary from "../../assets/team/mrs_mary.png";
+// import isah from "../../assets/team/isah1.png";
+// import fahad from "../../assets/team/fahad1.png";
+// import ishaq from "../../assets/team/ishaq1.png";
+// import mustapha from "../../assets/team/musty1.png";
 
 const teamMembers = [
   {
@@ -16,7 +23,7 @@ const teamMembers = [
     role: "GROUP CEO",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: murtala,
   },
   {
     id: 2,
@@ -24,7 +31,7 @@ const teamMembers = [
     role: "Group Head Legal Services",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: murtala,
   },
   {
     id: 3,
@@ -32,7 +39,7 @@ const teamMembers = [
     role: "Group Head Operations",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: murtala,
   },
   {
     id: 4,
@@ -40,15 +47,15 @@ const teamMembers = [
     role: "Group Head Business Development",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: murtala,
   },
   {
     id: 5,
-    name: "Munzali Muktar",
+    name: "Munzali Muktar (ACIBF)",
     role: "Group Financial Controller",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: murtala,
   },
   {
     id: 6,
@@ -56,7 +63,7 @@ const teamMembers = [
     role: " CEO Mylikita",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: murtala,
   },
   {
     id: 7,
@@ -110,16 +117,29 @@ export default function Teams({ Ref }) {
               Our <span>Team</span>
             </h2>
           </div>
-          <div className="team-left col-lg-4 col-md-12">
-            <h2>Our Team</h2>
-            <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+          <div className="team-left col-lg-5 col-md-12">
+            <img src={teamMembers[0].image} alt={teamMembers[0].name} className="w-100"/>
+            <h3>{teamMembers[0].name}</h3>
+            <p>{teamMembers[0].role}</p>
+            <p>{teamMembers[0].description}</p>
+            <div className="social-icons">
+              <a href="#">
+                <FaLinkedin />
+              </a>
+              <a href="#">
+                <FaMailBulk />
+              </a>
+              <a href="#">
+                <FaInstagram />
+              </a>
+            </div>
           </div>
-          <div className="team-right col-lg-8 col-md-12 d-flex">
+          <div className="team-right col-lg-7 col-md-12 d-flex">
             {teamMembers.map((member) => (
-              <motion.div className="team-member col-md-6 col-sm-12" key={member.id}>
+              <motion.div
+                className="team-member col-md-6 col-sm-12 text-left"
+                key={member.id}
+              >
                 <img src={member.image} alt={member.name} />
                 <h3>{member.name}</h3>
                 <p>{member.role}</p>

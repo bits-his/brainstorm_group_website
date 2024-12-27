@@ -60,7 +60,7 @@ export default function AppNavigation() {
               </>
             }
           />
-          <Route path="/portfolio" element={<Portfolio />} />
+          {/* <Route path="/portfolio" element={<Portfolio />} /> */}
           {/* <Route path="/blog" element={<Blog />} />
           <Route path="/blog/blog_details/:id" element={<BlogDetails />} />
           <Route path="/contact" element={<Contact />} />
