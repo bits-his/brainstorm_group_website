@@ -9,7 +9,7 @@
 
 .service-card:hover {
   /* background-color: rgba(0, 123, 255, 0.2); Darker on hover */
-  color: #007bff; /* Primary text color */
+  color: var(--main-color); /* Primary text color */
 }
 
 .service-card-icon {
@@ -22,6 +22,7 @@
 .service-card-title {
   font-size: 1.25rem;
   font-weight: 600;
+  margin-top: 10px;
 }
 
 .service-card-description {
@@ -30,7 +31,7 @@
 
 .service-card-link {
   display: inline-block;
-  color: #007bff; /* Primary link color */
+  color: var(--main-color); /* Primary link color */
   text-decoration: none;
 }
 
@@ -63,5 +64,6 @@
   font-size: 1rem;
   color: #666;
   margin: 0 auto;
-  max-width: 600px;
+  text-align: center;
+  /* max-width: 600px; */
 }

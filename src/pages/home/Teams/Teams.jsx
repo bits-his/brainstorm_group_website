@@ -2,6 +2,13 @@ import React from "react";
 import "./teams.css";
 import { FaInstagram, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import { motion } from "framer-motion";
+// import murtala from "../assets/team/murtala123.png";
+// import dangana from "../../assets/team/mr-dangana.png";
+// import mary from "../../assets/team/mrs_mary.png";
+// import isah from "../../assets/team/isah1.png";
+// import fahad from "../../assets/team/fahad1.png";
+// import ishaq from "../../assets/team/ishaq1.png";
+// import mustapha from "../../assets/team/musty1.png";
 
 const teamMembers = [
   {
@@ -18,32 +25,32 @@ const teamMembers = [
     name: "Nazif Abdulahi",
     role: "Group Head Legal Services",
     description:
-      "Oversees all legal matters across the group, ensuring compliance with regulations and protecting our interests while facilitating business growth through sound legal frameworks.",
-    image: ""
+      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+    image: "",
   },
   {
     id: 3,
     name: "Sadiq Khalifa",
     role: "Group Head Operations",
     description:
-      "Leads operational excellence across all our companies, implementing efficient processes and ensuring seamless coordination between different business units.",
-    image: ""
+      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+    image: "",
   },
   {
     id: 4,
     name: "Ismaila Kabir",
     role: "Group Head Business Development",
     description:
-      "Drives strategic partnerships and identifies new business opportunities, expanding our market presence and fostering relationships with key stakeholders.",
-    image: ""
+      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+    image: "",
   },
   {
     id: 5,
-    name: "Munzali Muktar",
+    name: "Munzali Muktar (ACIBF)",
     role: "Group Financial Controller",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 6,
@@ -51,7 +58,7 @@ const teamMembers = [
     role: " CEO Mylikita",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 7,
@@ -59,7 +66,7 @@ const teamMembers = [
     role: " CEO Inventria",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 8,
@@ -67,7 +74,7 @@ const teamMembers = [
     role: " CEO Knowtify",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 9,
@@ -75,7 +82,7 @@ const teamMembers = [
     role: " CEO Bitcoops",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 10,
@@ -83,7 +90,7 @@ const teamMembers = [
     role: " CEO Kasuwa Mall",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 11,
@@ -91,8 +98,8 @@ const teamMembers = [
     role: " CEO Elite Academic Tech",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
-  }
+    image: "",
+  },
 ];
 
 export default function Teams({ Ref }) {
