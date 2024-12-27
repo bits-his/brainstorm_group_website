@@ -13,6 +13,7 @@ import knowtify from "../../assets/logos/knowtify copy.png";
 export default function Portfolio({ refi }) {
   const [activeStartup, setActiveStartup] = useState('solutions');
   const startupRefs = useRef({});
+  const [currentSection, setCurrentSection] = useState('');
 
   const startups = [
     {
@@ -171,6 +172,7 @@ export default function Portfolio({ refi }) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveStartup(entry.target.id);
+            setCurrentSection(startups.find(s => s.id === entry.target.id)?.name || '');
           }
         });
       },
@@ -222,28 +224,38 @@ export default function Portfolio({ refi }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                {/* <h2>{startup.name}</h2> */}
-                <img src={startup.image} alt={startup.name} width={150} height={100} />
-                <p>{startup.description}</p>
-
-                {startup.list.map((item, index) => (
-                    <div key={index} >
+                <div className="startup-content-wrapper">
+                  <div className="startup-info">
+                  <img src={startup.image} alt={startup.name} width={150} height={100} />
+                    <p>{startup.description}</p>
+                    {startup.list.map((item, index) => (
+                      <div key={index}>
                         <ListCard name={item.name} description={item.description} />
-                    </div>
-                ))}
-                <a 
-                  href={startup.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="visit-button"
-                >
-                  Visit Website
-                </a>
+                      </div>
+                    ))}
+                    <a 
+                      href={startup.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="visit-button"
+                    >
+                      Visit Website
+                    </a>
+                  </div>
+                  <div className="startup-image-wrapper">
+                    <img src={startup.image} alt={startup.name} />
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </div>
+      {window.innerWidth <= 768 && currentSection && (
+        <div className="mobile-section-indicator">
+          {currentSection}
+        </div>
+      )}
     </div>
   );
 }

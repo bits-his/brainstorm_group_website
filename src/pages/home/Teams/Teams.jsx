@@ -1,29 +1,24 @@
 import React from "react";
 import "./teams.css";
-import {
-  // FaFacebookF,
-  FaInstagram,
-  FaLinkedin,
-  FaMailBulk
-  // FaTwitter,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const teamMembers = [
   {
     id: 1,
-    name: "Phisherman",
+    name: "Idris Abdulkadir Dangana",
     role: "GROUP CEO",
     description:
-      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+      "As the Group CEO, I lead our diverse portfolio of companies with a vision to transform various sectors through innovative technology solutions. My focus is on strategic growth, fostering innovation, and building sustainable businesses that create value for all stakeholders.",
+    image: "",
+    featured: true
   },
   {
     id: 2,
     name: "Nazif Abdulahi",
     role: "Group Head Legal Services",
     description:
-      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+      "Oversees all legal matters across the group, ensuring compliance with regulations and protecting our interests while facilitating business growth through sound legal frameworks.",
     image: ""
   },
   {
@@ -31,7 +26,7 @@ const teamMembers = [
     name: "Sadiq Khalifa",
     role: "Group Head Operations",
     description:
-      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+      "Leads operational excellence across all our companies, implementing efficient processes and ensuring seamless coordination between different business units.",
     image: ""
   },
   {
@@ -39,7 +34,7 @@ const teamMembers = [
     name: "Ismaila Kabir",
     role: "Group Head Business Development",
     description:
-      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+      "Drives strategic partnerships and identifies new business opportunities, expanding our market presence and fostering relationships with key stakeholders.",
     image: ""
   },
   {
@@ -111,29 +106,45 @@ export default function Teams({ Ref }) {
       <div className="team-container" ref={Ref} id="teams">
         <div className="row">
           <div className="team-left col-lg-4 col-md-12">
-            <h2>Our Team</h2>
+            <h2>Our Leadership</h2>
             <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Meet the visionaries and experts who drive our success through 
+              innovation, leadership, and commitment to excellence.
             </p>
           </div>
-          <div className="team-right col-lg-8 col-md-12 mt-md-5">
+          <div className="team-right col-lg-8 col-md-12">
             {teamMembers.map((member) => (
-              <motion.div className="team-member" key={member.id}>
-                <img src={member.image} alt={member.name} />
-                <h3>{member.name}</h3>
-                <p>{member.role}</p>
-                <p>{member.description}</p>
-                <div className="social-icons">
-                  <a href="#">
-                    <FaLinkedin />
-                  </a>
-                  <a href="#">
-                    <FaMailBulk />
-                  </a>
-                  <a href="#">
-                    <FaInstagram />
-                  </a>
+              <motion.div 
+                className={`team-member ${member.featured ? 'featured-member' : ''}`}
+                key={member.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="member-image">
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} />
+                  ) : (
+                    <div className="member-initials">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                  )}
+                </div>
+                <div className="member-info">
+                  <h3>{member.name}</h3>
+                  <h4>{member.role}</h4>
+                  <p>{member.description}</p>
+                  <div className="social-icons">
+                    <a href="#" aria-label={`LinkedIn profile of ${member.name}`}>
+                      <FaLinkedin />
+                    </a>
+                    <a href="#" aria-label={`Email ${member.name}`}>
+                      <FaMailBulk />
+                    </a>
+                    <a href="#" aria-label={`Instagram profile of ${member.name}`}>
+                      <FaInstagram />
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
