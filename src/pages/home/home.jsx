@@ -11,7 +11,7 @@ export default function Home({ sections }) {
     <>
       <Hero ref={sections.home} />
       <AboutUs  id="about" Ref={sections.about} />
-      <CoreValue id="corevalues" refi={sections.corevalues} />
+      {/* <CoreValue id="corevalues" refi={sections.corevalues} /> */}
       <Services id="services" refi={sections.services} />
       <Portfolio id="portfolio" refi={sections.portfolio} />
       <Teams id="teams" Ref={sections.teams} />

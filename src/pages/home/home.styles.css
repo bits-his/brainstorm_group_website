@@ -8,14 +8,13 @@
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: calc(100vh);
+  min-height: 100vh;
   display: flex;
   margin-top: 2.1rem;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 2rem 3rem;
-  /* overflow: hidden; */
+  justify-content: flex-start;
+  padding: 4rem 3rem;
 }
 
 .hero-background {
@@ -65,27 +64,45 @@
 
 .hero-content {
   position: relative;
-  z-index: 2;  /* Ensure content stays above the background */
-  color: white; /* Make text more visible against dark background */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add subtle text shadow */
+  z-index: 2;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content h4 {
-  font-size: 1.5rem;
-  margin-bottom: 3rem;
-  margin-top: 4rem;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-weight: 400;
-  font-family: 'Poppins', sans-serif;
+.hero-text-content {
   text-align: center;
+  margin-top: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: var(--grey-background);
+  text-shadow: none;
+}
+
+.typing-text {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  min-height: 60px;
+  color:var(--main-color);
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
 .hero-image-container {
@@ -153,14 +170,15 @@
   width: 100%;
   height: 400px;
   display: flex;
-  justify-content: center;
+  justify-content:center;
+  right: 20%;
   align-items: center;
   /* margin: 2rem 0; */
 }
 
 .startup-node {
   position: absolute;
-  width: 60px;
+  width: 120px;
   height: 60px;
   transition: all 0.5s ease;
   cursor: pointer;
@@ -180,9 +198,11 @@
 }
 
 .parent {
-  width: 100px;
+  width: 150px;
   height: 100px;
   top: 15%;
+  position: absolute;
+
 }
 
 /* Position classes for each startup */
@@ -246,65 +266,47 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.hero-title {
-  text-align: center;
-  color: #fff;
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
 .bottom-logo-strip {
   width: 100%;
-  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); */
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  color: #fff;
+  gap: 3rem;
+  margin-top: 7rem;
+  flex-wrap: wrap;
   position: absolute;
-  left: 0;
-  z-index: 10;
-  gap: 2rem;
-  /* margin-bottom: 3rem; */
+  top: calc(100% + 10px);
+  background: linear-gradient(to top, transparent);
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); */
 }
 
 .bottom-logo {
-  width: 50px;
+  width: 150px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.2rem;
 }
 
 .bottom-logo img {
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: auto;
   object-fit: contain;
   filter: brightness(0.9);
   transition: all 0.3s ease;
   border-radius: 12px;
-  animation: fadeIn 0.3s ease forwards;
-  cursor: pointer;
-  /* border: 2px solid #fff; */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-
-}
-
-.bottom-logo:hover img {
-  filter: brightness(1.2);
-  transform: scale(1.1);
+  /* background: rgba(255, 255, 255, 0.1); */
+  padding: 0.5rem;
 }
 
 .bottom-logo-name {
- color: #fff;
-  font-size: 1.3rem;
-  opacity: 0.8;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-size: 1rem;
   font-weight: 500;
+  opacity: 0.9;
 }
 
 /* Responsive adjustments */
@@ -352,10 +354,40 @@
   .value-letter {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #000;
+    color: var(--main-color);
     min-width: 2rem;
   }
   
   .value-text {
     font-size: 0.8rem;
+  }
+
+  .core-values-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color:var(--main-color);
+  }
+
+  .core-values-text span {
+    font-weight: 600;
+  }
+
+  .core-values-text span:hover {
+    color: var(--red-color);
+  }
+  
+  .core-values-letter  {
+    color:var(--main-color);
+  }
+
+  .core-values-letter span {
+    color: var(--red-color);
+  }
+
+  .list-icon {
+    color: var(--red-color);
+  }
+
+  .list-icon:hover {
+    color: var(--main-color);
   }

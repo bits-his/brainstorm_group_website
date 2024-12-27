@@ -5,13 +5,15 @@ import {
   AlertTriangle,
   BookOpen,
   ShoppingBag,
-  Boxes,
+  // Boxes,
+  // Truck,
 } from "lucide-react";
 import { ServiceCard } from "./ServiceCard";
+import {  MdOutlineInventory } from "react-icons/md";
 
 const services = [
   {
-    title: "Public Finance",
+    title: "Public Finance Management",
     description: "Optimize tax and budgeting systems.",
     icon: PieChart, // Represents financial data and insights
     href: "/services/public-finance",
@@ -23,7 +25,7 @@ const services = [
     href: "/services/healthcare",
   },
   {
-    title: "Corporate Solutions",
+    title: "Cooperative Solutions",
     description: "Streamline operations with tailored software.",
     icon: Briefcase, // Represents corporate tools and solutions
     href: "/services/corporate",
@@ -35,7 +37,7 @@ const services = [
     href: "/services/early-warning",
   },
   {
-    title: "Education Solutions",
+    title: "Educational Solutions",
     description: "Empowering learning through technology.",
     icon: BookOpen, // Represents education and knowledge
     href: "/services/education",
@@ -47,9 +49,9 @@ const services = [
     href: "/services/ecommerce",
   },
   {
-    title: "Inventory Management",
+    title: "POS and Accounting System",
     description: "Efficient tracking and stock control.",
-    icon: Boxes, // Represents inventory and logistics
+    icon: MdOutlineInventory, // Represents inventory and logistics
     href: "/services/inventory",
   },
 ];
@@ -57,7 +59,7 @@ const services = [
 export default function Services({ refi }) {
   return (
     <div id="services" ref={refi}>
-      <section className="py-12 px-4 md:py-24">
+      <section className="py-12 px-5 md:py-24">
         <div className="services-header">
           <h2 className="services-title">
             Our <span>Services</span>
