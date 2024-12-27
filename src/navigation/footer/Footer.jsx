@@ -5,7 +5,7 @@ import map from "../../assets/map.webp";
 import call from "../../assets/call.webp";
 // import message from "../../assets/logos/message.webp";
 import "./footer.css";
-import { IoLogoFacebook } from "react-icons/io5";
+import { IoLocationSharp, IoLogoFacebook } from "react-icons/io5";
 import { FaLightbulb, FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaMailBulk } from "react-icons/fa";
@@ -180,18 +180,55 @@ export default function Footer() {
               </div>
               <div className="col-12 col-sm-12 col-md-4 ps-sm-1 col-lg-3 col-xl-3">
                 <div className="footer-contact">
-                  <h5 className="mt-3">Contact </h5>
+                  <h5 className="mt-3">Adresses </h5>
                   <div
                     className="underline w-25"
                     style={{ marginTop: "-20px" }}
                   ></div>
 
-                  <div className="location d-flex">
+                  {/* <div className="location d-flex">
                     <img src={map} alt="map" />
                     <p>
                       Floor 1, African Alliance Building, No 1 Sani Abacha Way,
                       Kano
                     </p>
+                  </div> */}
+                  <div id="address">
+                    {/* <h4>Office Location</h4> */}
+                    <ul>
+                      <li>
+                        <div>
+                          <IoLocationSharp className="footer-icon " />
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Cooperate HQ :
+                          </strong>
+                          <br />
+                          {" "}Floor 1, African Alliance Building, No 1 Sani Abacha
+                          Way, Kano
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Branch Office:
+                          </strong>
+                          <br />
+                          <IoLocationSharp />
+                          Behind Olu Wheel Balances Workshop, Gidan Dawa,
+                          Katsina State,Nigeria
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Branch Office:
+                          </strong>
+                          <br />
+                          <IoLocationSharp />
+                          Flat 42, DROL Estate Wuye Abuja,Nigeria
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                   {/* <div className="location d-flex">
                     <img src={map} alt="map" />

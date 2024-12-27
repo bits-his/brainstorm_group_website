@@ -60,8 +60,13 @@ export default function Navbar({ sectionRefs }) {
       {/* {JSON.stringify(activeSection)} */}
       <header className={`${isSticky ? "isSticky" : ""}`}>
         <div className="header">
-          <div className="logo-container">
-            <NavLink to="/" className=" pt-2">
+          <div
+            className="logo-container"
+            onClick={
+              location.pathname === "/" ? null : () => navigate("/#home")
+            }
+          >
+            <NavLink href="#home" className=" pt-2">
               <div className="text-logo">
                 <FaLightbulb className="brainstorm-icon" />
                 <div className="text-content">
@@ -75,7 +80,7 @@ export default function Navbar({ sectionRefs }) {
           <div className={`head-main ${isMenuOpen ? "open" : ""}`}>
             <div className="inner">
               <ul className={`navlist`} onClick={handleLinkClick}>
-                <li
+                {/* <li
                   onClick={
                     location.pathname === "/" ? null : () => navigate("/#home")
                   }
@@ -86,7 +91,7 @@ export default function Navbar({ sectionRefs }) {
                   >
                     Home
                   </a>
-                </li>
+                </li> */}
                 <li
                   onClick={
                     location.pathname === "/blog#about"
@@ -143,7 +148,7 @@ export default function Navbar({ sectionRefs }) {
                     Teams
                   </a>
                 </li>
-                <li
+                {/* <li
                   onClick={
                     location.pathname === "/blog#contact"
                       ? null
@@ -156,7 +161,7 @@ export default function Navbar({ sectionRefs }) {
                   >
                     Contact
                   </a>
-                </li>
+                </li> */}
 
                 {/* <li>
             <a href="#blog" className={activeSection === 'blog' ? 'active' : ''}>

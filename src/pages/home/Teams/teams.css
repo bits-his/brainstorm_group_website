@@ -1,103 +1,263 @@
 .team-container {
-    display: flex;
-    margin: 20px auto;
-    padding: 0 2rem;
-    margin-top: 4.2rem;
+    padding: 4rem 2rem;
 }
 
 .team-left {
-    background-color:var(--main-color);
-    color: #dcdcdc;
-    border-radius: 10px;
-    padding: 30px;
-    height: 84vh;
-    position: sticky;
-    top: 5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding-right: 2rem;
 }
 
 .team-left h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
 }
-
-.team-left p {
-    margin: 10px 0;
-    line-height: 1.6;
-}
-
-/* .learn-more {
-    background-color: white;
-    color:var(--main-color);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.learn-more:hover {
-    background-color: #f4f4f4;
-} */
 
 .team-right {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0 20px;
-    /* margin-top: 5rem; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .team-member {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    flex: 1 1 calc(50% - 20px);
-    box-sizing: border-box;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.team-member img {
-    width: 100px;
-    height: 100px;
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.featured-member {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 3rem;
+    padding: 4rem;
+    background: var(--main-color);
+    color: white;
+    margin: 0 auto 5rem auto;
+    min-height: 350px;
+    max-width: 1200px;
+}
+
+.featured-member .member-image {
+    width: 320px;
+    height: 320px;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.member-image {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    overflow: hidden;
+    margin-bottom: 1rem;
 }
 
-.team-member h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.team-member p {
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #555;
+.member-initials {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.member-info h3 {
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.member-info h4 {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.member-info p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .social-icons {
     display: flex;
-    justify-content: center;
+    gap: 1rem;
 }
 
 .social-icons a {
-    margin: 0 10px;
-    color:var(--main-color);
-    font-size: 20px;
-    transition: color 0.3s;
+    color: var(--main-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #555;
+    color: var(--accent-color);
 }
 
-@media screen and (max-width: 991px) {
-    .team-left {
-        position: static;
+.featured-member .member-info h3 {
+    color: white;
+}
+
+.featured-member .member-info h4 {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.featured-member .member-info p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.featured-member .social-icons a {
+    color: white;
+}
+
+.featured-member .social-icons a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.featured-member .member-initials {
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.featured-member:hover {
+    background: var(--main-color);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.startup-ecosystem {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+}
+
+.parent {
+    width: 200px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 2;
+}
+
+@keyframes orbit {
+    from { 
+        transform: rotate(0deg) translateX(220px) rotate(0deg);
     }
+    to { 
+        transform: rotate(360deg) translateX(220px) rotate(-360deg);
+    }
+<<<<<<< Tabnine <<<<<<<
     .team-right {
-        margin-top: 2rem;
+        margin-top: 2rem;//-
+        display: grid;//+
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));//+
+        gap: 2.5rem;//+
         padding: 0;
+        max-width: 1200px;//+
+        margin: 0 auto;//+
+        margin-top: 2rem; /* Added missing property *///+
+    }
+>>>>>>> Tabnine >>>>>>>// {"conversationId":"6b0a08d0-92ce-40c7-b471-89c9a85f86ec","source":"instruct"}
+}
+
+@media (max-width: 1200px) {
+    .featured-member .member-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    @keyframes orbit {
+        from { transform: rotate(0deg) translateX(180px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(180px) rotate(-360deg); }
+    }
+
+    .parent {
+        width: 180px;
+        height: 130px;
     }
 }
+
+@media (max-width: 992px) {
+    .featured-member {
+        padding: 3rem;
+    }
+
+    .featured-member .member-image {
+        width: 400px;
+        height: 240px;
+    }
+
+    @keyframes orbit {
+        from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+    }
+
+    .parent {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .startup-ecosystem {
+        height: 400px;
+    }
+
+    .parent {
+        width: 120px;
+        height: 80px;
+    }
+
+    @keyframes orbit {
+        from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+    }
+
+    .featured-member {
+        padding: 2rem;
+    }
+
+    .featured-member .member-image {
+        width: 90vw;
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .startup-ecosystem {
+        height: 300px;
+    }
+
+    .parent {
+        width: 100px;
+        height: 70px;
+    }
+
+    @keyframes orbit {
+        from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+    }
+}
+

@@ -1,13 +1,12 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { SkeletonTheme } from "react-loading-skeleton";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Home from "./pages/home/home";
 import Navbar from "./navigation/navbar/Navbar";
 import Footer from "./navigation/footer/Footer";
-import Portfolio from './pages/portfolio/Portfolio.jsx';
 // import Home from "../home/home.jsx"
 // import Contact from '../contact/Contact.js'
 // import Blog from "../blog/Blogs.jsx"
@@ -29,10 +28,8 @@ export default function AppNavigation() {
     home: useRef(),
     clients: useRef(),
     services: useRef(),
-    portfolio: useRef(),
     bihub: useRef(),
     about: useRef(),
-    teams: useRef(),
     products: useRef(),
     blog: useRef(),
   };
@@ -47,7 +44,7 @@ export default function AppNavigation() {
     <>
       {!invalidRoute && <Navbar sectionRefs={sectionRefs} />}
 
-      <SkeletonTheme baseColor="#var(--main-color)6c" highlightColor="#ff3b456c">
+      <SkeletonTheme baseColor="#076ACD6c" highlightColor="#ff3b456c">
         <Routes>
           <Route
             exact
@@ -56,11 +53,9 @@ export default function AppNavigation() {
               <>
                 {navigateToHome()}
                 <Home sections={sectionRefs} />
-                
               </>
             }
           />
-          <Route path="/portfolio" element={<Portfolio />} />
           {/* <Route path="/blog" element={<Blog />} />
           <Route path="/blog/blog_details/:id" element={<BlogDetails />} />
           <Route path="/contact" element={<Contact />} />
