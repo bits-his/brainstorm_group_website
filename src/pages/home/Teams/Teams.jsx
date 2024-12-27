@@ -4,7 +4,7 @@ import {
   // FaFacebookF,
   FaInstagram,
   FaLinkedin,
-  FaMailBulk
+  FaMailBulk,
   // FaTwitter,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -16,7 +16,7 @@ const teamMembers = [
     role: "GROUP CEO",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const teamMembers = [
     role: "Group Head Legal Services",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const teamMembers = [
     role: "Group Head Operations",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const teamMembers = [
     role: "Group Head Business Development",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const teamMembers = [
     role: "Group Financial Controller",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 6,
@@ -56,7 +56,7 @@ const teamMembers = [
     role: " CEO Mylikita",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 7,
@@ -64,7 +64,7 @@ const teamMembers = [
     role: " CEO Inventria",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 8,
@@ -72,7 +72,7 @@ const teamMembers = [
     role: " CEO Knowtify",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 9,
@@ -80,7 +80,7 @@ const teamMembers = [
     role: " CEO Bitcoops",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 10,
@@ -88,7 +88,7 @@ const teamMembers = [
     role: " CEO Kasuwa Mall",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
+    image: "",
   },
   {
     id: 11,
@@ -96,20 +96,20 @@ const teamMembers = [
     role: " CEO Elite Academic Tech",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: ""
-  }
+    image: "",
+  },
 ];
 
 export default function Teams({ Ref }) {
   return (
     <div>
-      <div className="services-header">
-        <h2 className="services-title">
-          Our <span>Team</span>
-        </h2>
-      </div>
       <div className="team-container" ref={Ref} id="teams">
         <div className="row">
+          <div className="services-header">
+            <h2 className="services-title">
+              Our <span>Team</span>
+            </h2>
+          </div>
           <div className="team-left col-lg-4 col-md-12">
             <h2>Our Team</h2>
             <p>
@@ -117,9 +117,9 @@ export default function Teams({ Ref }) {
               nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
-          <div className="team-right col-lg-8 col-md-12 mt-md-5">
+          <div className="team-right col-lg-8 col-md-12 d-flex">
             {teamMembers.map((member) => (
-              <motion.div className="team-member" key={member.id}>
+              <motion.div className="team-member col-md-6 col-sm-12" key={member.id}>
                 <img src={member.image} alt={member.name} />
                 <h3>{member.name}</h3>
                 <p>{member.role}</p>
