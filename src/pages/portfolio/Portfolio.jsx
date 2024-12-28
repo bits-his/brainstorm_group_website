@@ -289,9 +289,9 @@ export default function Portfolio({ refi }) {
             </div>
           </div>
         </div>
-        {window.innerWidth <= 768 && currentSection && (
+        {/* {window.innerWidth <= 768 && currentSection && (
           <div className="mobile-section-indicator">{currentSection}</div>
-        )}
+        )} */}
       </div>
     </div>
   );

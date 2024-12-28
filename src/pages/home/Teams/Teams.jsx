@@ -107,13 +107,14 @@ export default function Teams({ Ref }) {
   return (
     <div>
       <div className="team-container" ref={Ref} id="teams">
+        
+
+        <div className="row">
         <div className="services-header mb-4">
           <h2 className="services-title">
             Our <span>Team</span>
           </h2>
         </div>
-
-        <div className="row">
           {/* Featured Member - Left Side */}
           {/* <div className="col-md-1"></div> */}
           <div className="col-xl-4 col-lg-6 col-md-10 col-sm-12 mb-4 mb-lg-0">
