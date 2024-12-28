@@ -133,7 +133,7 @@ export default function CoreValue({ Ref }) {
               </div>
             </div>
             <div className="col-12 col-lg-6">
-              <h1 className="mb-4 core-values-title">Core <span>Values</span></h1>
+              <h1 className="mb-4 core-values-title">Core Values</h1>
               <div className="core-values-list">
                 <div className="value-row">
                   <span className="value-letter core-values-letter">B</span>

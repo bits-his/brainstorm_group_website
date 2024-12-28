@@ -332,7 +332,7 @@
 /* Core values responsive adjustments */
 @media screen and (max-width: 992px) {
   .core-values-list {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -484,7 +484,7 @@
 .core-values-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 1rem 0;
 }
 
@@ -492,7 +492,7 @@
   display: grid;
   grid-template-columns: 60px 1fr;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
   text-align: left;
 }
 
@@ -516,13 +516,12 @@
   color: white;
 }
 
-.core-values-text {
+/* .core-values-text {
   display: flex;
-  flex-direction: column;
   gap: 0.3rem;
   font-size: 1rem;
   line-height: 1.6;
-}
+} */
 
 .core-values-text span {
   font-size: 1.1rem;
@@ -577,7 +576,7 @@
   }
 
   .core-values-list {
-    gap: 1.2rem;
+    gap: 1rem;
   }
 
   .value-row {
