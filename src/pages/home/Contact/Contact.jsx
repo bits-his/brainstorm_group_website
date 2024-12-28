@@ -1,71 +1,91 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import './contact.styles.css';
 
-export default function ContactForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+export default function Contact({ refi }) {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add form submission logic
   };
 
   return (
-    <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:bg-gray-100 dark:text-gray-800">
-      <div className="flex flex-col justify-between">
-        <div className="space-y-2">
-          <h2 className="text-4xl font-bold leading-tight lg:text-5xl">
-            Let's talk!
-          </h2>
-          <div className="dark:text-gray-600">
-            Vivamus in nisl metus? Phasellus.
+    <div className="contact-section" ref={refi} id="contact">
+      <div className="container py-5">
+        <div className="row justify-content-between align-items-center">
+          <div className="col-12 col-lg-5">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="section-title mb-4">Get in Touch</h2>
+              <p className="mb-4">Have a question or want to work together?</p>
+              <div className="contact-info">
+                <div className="mb-3">
+                  <i className="fas fa-map-marker-alt me-2"></i>
+                  Your Address
+                </div>
+                <div className="mb-3">
+                  <i className="fas fa-phone me-2"></i>
+                  Your Phone
+                </div>
+                <div className="mb-3">
+                  <i className="fas fa-envelope me-2"></i>
+                  your@email.com
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="col-12 col-lg-6">
+            <motion.form
+              className="contact-form"
+              onSubmit={handleSubmit}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Your Name"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                />
+              </div>
+              <div className="mb-3">
+                <input
+                  type="email"
+                  className="form-control"
+                  placeholder="Your Email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                />
+              </div>
+              <div className="mb-3">
+                <textarea
+                  className="form-control"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                ></textarea>
+              </div>
+              <button type="submit" className="btn btn-primary">Send Message</button>
+            </motion.form>
           </div>
         </div>
-        <img src="assets/svg/doodle.svg" alt="" className="p-6 h-52 md:h-64" />
       </div>
-      <form noValidate="" className="space-y-6">
-        <div>
-          <label htmlFor="name" className="text-sm">
-            Full name
-          </label>
-          <input
-            id="name"
-            type="text"
-            placeholder=""
-            className="w-full p-3 rounded dark:bg-gray-100"
-          />
-        </div>
-        <div>
-          <label htmlFor="email" className="text-sm">
-            Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            className="w-full p-3 rounded dark:bg-gray-100"
-          />
-        </div>
-        <div>
-          <label htmlFor="message" className="text-sm">
-            Message
-          </label>
-          <textarea
-            id="message"
-            rows="3"
-            className="w-full p-3 rounded dark:bg-gray-100"
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-violet-600 dark:text-gray-50"
-        >
-          Send Message
-        </button>
-      </form>
     </div>
   );
 }

@@ -1,12 +1,6 @@
 import React from "react";
 import "./teams.css";
-import {
-  // FaFacebookF,
-  FaInstagram,
-  FaLinkedin,
-  FaMailBulk,
-  // FaTwitter,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import { motion } from "framer-motion";
 import murtala from "../../../assets/team/murtala123.png";
 import dangana from "../../../assets/team/mr-dangana.png";
@@ -16,18 +10,16 @@ import fahad from "../../../assets/team/fahad1.png";
 import ishaq from "../../../assets/team/ishaq1.png";
 import mustapha from "../../../assets/team/musty1.png";
 
-const ceo = [
-    {
-      id: 1,
-      name: "Phisherman",
-      role: "GROUP CEO",
-      description:
-        "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-      image: dangana,
-    },
-]
-
 const teamMembers = [
+  {
+    id: 1,
+    name: "Idris Abdulkadir Dangana",
+    role: "GROUP CEO",
+    description:
+      "As the Group CEO, I lead our diverse portfolio of companies with a vision to transform various sectors through innovative technology solutions. My focus is on strategic growth, fostering innovation, and building sustainable businesses that create value for all stakeholders.",
+    image: "",
+    featured: true
+  },
   {
     id: 2,
     name: "Nazif Abdulahi",
@@ -121,45 +113,45 @@ export default function Teams({ Ref }) {
             </h2>
           </div>
           <div className="team-left col-lg-4 col-md-12">
-            <div className="team-left-image">
-
-            <img src={ceo[0].image} alt={ceo[0].name}/>
-            </div>
-            <h3>{ceo[0].name}</h3>
-            <p>{ceo[0].role}</p>
-            <p>{ceo[0].description}</p>
-            <div className="social-icons">
-              <a href="#">
-                <FaLinkedin />
-              </a>
-              <a href="#">
-                <FaMailBulk />
-              </a>
-              <a href="#">
-                <FaInstagram />
-              </a>
-            </div>
+            <h2>Our Leadership</h2>
+            <p>
+              Meet the visionaries and experts who drive our success through 
+              innovation, leadership, and commitment to excellence.
+            </p>
           </div>
-          <div className="team-right col-lg-8 col-md-12 d-flex">
+          <div className="team-right col-lg-8 col-md-12">
             {teamMembers.map((member) => (
-              <motion.div
-                className="team-member col-md-4 col-lg-4 col-sm-12 text-left"
+              <motion.div 
+                className={`team-member ${member.featured ? 'featured-member' : ''}`}
                 key={member.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                <img src={member.image} alt={member.name} />
-                <h3>{member.name}</h3>
-                <p>{member.role}</p>
-                <p>{member.description}</p>
-                <div className="social-icons">
-                  <a href="#">
-                    <FaLinkedin />
-                  </a>
-                  <a href="#">
-                    <FaMailBulk />
-                  </a>
-                  <a href="#">
-                    <FaInstagram />
-                  </a>
+                <div className="member-image">
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} />
+                  ) : (
+                    <div className="member-initials">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                  )}
+                </div>
+                <div className="member-info">
+                  <h3>{member.name}</h3>
+                  <h4>{member.role}</h4>
+                  <p>{member.description}</p>
+                  <div className="social-icons">
+                    <a href="#" aria-label={`LinkedIn profile of ${member.name}`}>
+                      <FaLinkedin />
+                    </a>
+                    <a href="#" aria-label={`Email ${member.name}`}>
+                      <FaMailBulk />
+                    </a>
+                    <a href="#" aria-label={`Instagram profile of ${member.name}`}>
+                      <FaInstagram />
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}

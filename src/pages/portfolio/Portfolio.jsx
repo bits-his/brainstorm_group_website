@@ -13,6 +13,7 @@ import knowtify from "../../assets/logos/knowtify copy.png";
 export default function Portfolio({ refi }) {
   const [activeStartup, setActiveStartup] = useState("solutions");
   const startupRefs = useRef({});
+  const [currentSection, setCurrentSection] = useState("");
 
   const startups = [
     {
@@ -26,19 +27,19 @@ export default function Portfolio({ refi }) {
         {
           name: "Web Development",
           description:
-            "We build custom websites for businesses and individuals, ensuring they are responsive, secure, and optimized for performance.",
+            "We build custom websites for businesses and individuals, ensuring they are responsive, secure, and optimized for performance."
         },
         {
           name: "Software Development",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Digital Transformation",
           description:
-            "We help businesses modernize their operations and improve their digital capabilities, ensuring they are efficient, secure, and optimized for performance.",
-        },
-      ],
+            "We help businesses modernize their operations and improve their digital capabilities, ensuring they are efficient, secure, and optimized for performance."
+        }
+      ]
     },
     {
       id: "likita",
@@ -51,19 +52,19 @@ export default function Portfolio({ refi }) {
         {
           name: "Healthcare Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Patient Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Appointment Scheduling",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
-        },
-      ],
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
+        }
+      ]
     },
     {
       id: "elite",
@@ -76,19 +77,19 @@ export default function Portfolio({ refi }) {
         {
           name: "School Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Student Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Parent Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
-        },
-      ],
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
+        }
+      ]
     },
     {
       id: "inventria",
@@ -101,19 +102,19 @@ export default function Portfolio({ refi }) {
         {
           name: "Inventory Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Reporting",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Sales Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
-        },
-      ],
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
+        }
+      ]
     },
     {
       id: "bitcoops",
@@ -126,19 +127,19 @@ export default function Portfolio({ refi }) {
         {
           name: "Cooperative Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Member Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Transaction Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
-        },
-      ],
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
+        }
+      ]
     },
     {
       id: "kasuwa",
@@ -151,19 +152,19 @@ export default function Portfolio({ refi }) {
         {
           name: "E-commerce",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Vendor Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Customer Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
-        },
-      ],
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
+        }
+      ]
     },
     {
       id: "knowtify",
@@ -176,20 +177,20 @@ export default function Portfolio({ refi }) {
         {
           name: "Disaster Management",
           description:
-            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance.",
+            "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Early Warning System",
           description:
-            "Early warning system for disasters and emergencies, ensuring they are efficient, secure, and optimized for performance.",
+            "Early warning system for disasters and emergencies, ensuring they are efficient, secure, and optimized for performance."
         },
         {
           name: "Location Based Services",
           description:
-            "Location based services for disasters and emergencies, ensuring they are efficient, secure, and optimized for performance.",
-        },
-      ],
-    },
+            "Location based services for disasters and emergencies, ensuring they are efficient, secure, and optimized for performance."
+        }
+      ]
+    }
   ];
 
   useEffect(() => {
@@ -198,6 +199,9 @@ export default function Portfolio({ refi }) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveStartup(entry.target.id);
+            setCurrentSection(
+              startups.find((s) => s.id === entry.target.id)?.name || ""
+            );
           }
         });
       },
@@ -250,36 +254,44 @@ export default function Portfolio({ refi }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  {/* <h2>{startup.name}</h2> */}
-                  <img
-                    src={startup.image}
-                    alt={startup.name}
-                    width={150}
-                    height={100}
-                  />
-                  <p>{startup.description}</p>
-
-                  {startup.list.map((item, index) => (
-                    <div key={index}>
-                      <ListCard
-                        name={item.name}
-                        description={item.description}
+                  <div className="startup-content-wrapper">
+                    <div className="startup-info">
+                      <img
+                        src={startup.image}
+                        alt={startup.name}
+                        width={150}
+                        height={100}
                       />
+                      <p>{startup.description}</p>
+                      {startup.list.map((item, index) => (
+                        <div key={index}>
+                          <ListCard
+                            name={item.name}
+                            description={item.description}
+                          />
+                        </div>
+                      ))}
+                      <a
+                        href={startup.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="visit-button"
+                      >
+                        Visit Website
+                      </a>
                     </div>
-                  ))}
-                  <a
-                    href={startup.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="visit-button"
-                  >
-                    Visit Website
-                  </a>
+                    <div className="startup-image-wrapper">
+                      <img src={startup.image} alt={startup.name} />
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </div>
+        {window.innerWidth <= 768 && currentSection && (
+          <div className="mobile-section-indicator">{currentSection}</div>
+        )}
       </div>
     </div>
   );
