@@ -1,4 +1,3 @@
-
 import "./teams.css";
 import { FaInstagram, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -16,7 +15,7 @@ const teamMembers = [
     name: "Idris Abdulkadir Dangana",
     role: "GROUP CEO",
     description:
-      "As the Group CEO, I lead our diverse portfolio of companies with a vision to transform various sectors through innovative technology solutions. My focus is on strategic growth, fostering innovation, and building sustainable businesses that create value for all stakeholders.",
+      "As the Group CEO, I lead our diverse portfolio of companies with a vision to transform various sectors through innovative technology solutions. My focus is on strategic growth, fostering innovation.",
     image: dangana,
     featured: true,
   },
@@ -104,8 +103,6 @@ const teamMembers = [
 const featuredMember = teamMembers[0];
 const remainingMembers = teamMembers.slice(1);
 
-
-
 export default function Teams({ Ref }) {
   return (
     <div>
@@ -115,65 +112,83 @@ export default function Teams({ Ref }) {
             Our <span>Team</span>
           </h2>
         </div>
-        
+
         <div className="row">
           {/* Featured Member - Left Side */}
-          <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          {/* <div className="col-md-1"></div> */}
+          <div className="col-xl-4 col-lg-6 col-md-10 col-sm-12 mb-4 mb-lg-0">
             <div className="team-left">
               <div className="member-image">
                 <img src={featuredMember.image} alt={featuredMember.name} />
               </div>
-              <h3>{featuredMember.name}</h3>
-              <h5>{featuredMember.role}</h5>
-              <p>{featuredMember.description}</p>
-              <div className="social-icons">
-                <a href="#" aria-label={`LinkedIn profile of ${featuredMember.name}`}>
-                  <FaLinkedin />
-                </a>
-                <a href="#" aria-label={`Email ${featuredMember.name}`}>
-                  <FaMailBulk />
-                </a>
-                <a href="#" aria-label={`Instagram profile of ${featuredMember.name}`}>
-                  <FaInstagram />
-                </a>
+              <div className="team-left-text">
+                <h3>{featuredMember.name}</h3>
+                <h5>{featuredMember.role}</h5>
+                <p>{featuredMember.description}</p>
+                <div className="social-icons">
+                  <a
+                    href="#"
+                    aria-label={`LinkedIn profile of ${featuredMember.name}`}
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a href="#" aria-label={`Email ${featuredMember.name}`}>
+                    <FaMailBulk />
+                  </a>
+                  <a
+                    href="#"
+                    aria-label={`Instagram profile of ${featuredMember.name}`}
+                  >
+                    <FaInstagram />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Remaining Members - Right Side */}
-          <div className="col-lg-8 col-md-12">
-            <div className="team-right">
-              {remainingMembers.map((member) => (
-                <motion.div
-                  className="team-member"
-                  key={member.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <div className="member-image">
-                    <img src={member.image} alt={member.name} />
-                  </div>
-                  <div className="member-info">
-                    <h3>{member.name}</h3>
-                    <h5>{member.role}</h5>
-                    <p>{member.description}</p>
-                    <div className="social-icons">
-                      <a href="#" aria-label={`LinkedIn profile of ${member.name}`}>
-                        <FaLinkedin />
-                      </a>
-                      <a href="#" aria-label={`Email ${member.name}`}>
-                        <FaMailBulk />
-                      </a>
-                      <a href="#" aria-label={`Instagram profile of ${member.name}`}>
-                        <FaInstagram />
-                      </a>
+          <div className="col-xl-8 col-lg-6 col-md-10 col-sm-12">
+            <div className="row">
+              {remainingMembers.map((member, id) => (
+                <div className="col-xl-6 col-sm-12 col-md-12 mb-3" key={id}>
+                  <motion.div
+                    className="team-member"
+                    key={member.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <div className="member-image">
+                      <img src={member.image} alt={member.name} />
                     </div>
-                  </div>
-                </motion.div>
+                    <div className="member-info">
+                      <h3>{member.name}</h3>
+                      <h5>{member.role}</h5>
+                      <p>{member.description}</p>
+                      <div className="social-icons">
+                        <a
+                          href="#"
+                          aria-label={`LinkedIn profile of ${member.name}`}
+                        >
+                          <FaLinkedin />
+                        </a>
+                        <a href="#" aria-label={`Email ${member.name}`}>
+                          <FaMailBulk />
+                        </a>
+                        <a
+                          href="#"
+                          aria-label={`Instagram profile of ${member.name}`}
+                        >
+                          <FaInstagram />
+                        </a>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
               ))}
             </div>
           </div>
+          {/* <div className="col-md-1"></div> */}
         </div>
       </div>
     </div>

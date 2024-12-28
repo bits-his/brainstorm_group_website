@@ -5,7 +5,7 @@ import { Target, Compass } from "lucide-react";
 export default function AboutUs({ refi }) {
   return (
     <>
-      <div className="portfolio-container" ref={refi} id="about">
+      <div className="portfolio-container" ref={refi} id="aboutus">
         <div className="row align-items-center">
           <div className="col-md-12 col-lg-6 mb-4 mb-md-0">
             <h3
