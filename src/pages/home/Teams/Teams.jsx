@@ -9,12 +9,12 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import murtala from "../../../assets/team/murtala123.png";
-// import dangana from "../../assets/team/mr-dangana.png";
-// import mary from "../../assets/team/mrs_mary.png";
-// import isah from "../../assets/team/isah1.png";
-// import fahad from "../../assets/team/fahad1.png";
-// import ishaq from "../../assets/team/ishaq1.png";
-// import mustapha from "../../assets/team/musty1.png";
+import dangana from "../../../assets/team/mr-dangana.png";
+import mary from "../../../assets/team/mrs_mary.png";
+import isah from "../../../assets/team/isah1.png";
+import fahad from "../../../assets/team/fahad1.png";
+import ishaq from "../../../assets/team/ishaq1.png";
+import mustapha from "../../../assets/team/musty1.png";
 
 const teamMembers = [
   {
@@ -23,7 +23,7 @@ const teamMembers = [
     role: "GROUP CEO",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: murtala,
+    image: dangana,
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const teamMembers = [
     role: "Group Head Legal Services",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: murtala,
+    image: isah,
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const teamMembers = [
     role: "Group Head Operations",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: murtala,
+    image: mary,
   },
   {
     id: 4,
@@ -118,7 +118,7 @@ export default function Teams({ Ref }) {
             </h2>
           </div>
           <div className="team-left col-lg-5 col-md-12">
-            <img src={teamMembers[0].image} alt={teamMembers[0].name} className="w-100"/>
+            <img src={teamMembers[0].image} alt={teamMembers[0].name} className=""/>
             <h3>{teamMembers[0].name}</h3>
             <p>{teamMembers[0].role}</p>
             <p>{teamMembers[0].description}</p>
