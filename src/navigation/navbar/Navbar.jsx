@@ -54,6 +54,7 @@ export default function Navbar({ sectionRefs }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  console.log(activeSection);
   const location = useLocation();
   const navigate = useNavigate();
   // console.log(activeSection);
@@ -130,7 +131,7 @@ export default function Navbar({ sectionRefs }) {
                     href="#portfolio"
                     className={activeSection === "portfolio" ? "active" : ""}
                   >
-                    portfolio
+                    Portfolio
                   </a>
                 </li>
                 <li

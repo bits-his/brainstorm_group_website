@@ -5,11 +5,11 @@ import { Target, Compass } from "lucide-react";
 export default function AboutUs({ refi }) {
   return (
     <>
-      <div className="px-5 my-5" ref={refi} id="aboutus">
-        <h2 className="services-title">
-          About <span>us</span>
-        </h2>
+      <div className="portfolio-container" ref={refi} id="about">
         <div className="row align-items-center">
+          <h2 className="services-title">
+            About <span>us</span>
+          </h2>
           <div className="col-md-12 col-lg-6 mb-4 mb-md-0">
             <h3
               className="mb-2"
@@ -18,11 +18,11 @@ export default function AboutUs({ refi }) {
               Brainstorm Group
             </h3>
             <p className="mb-4">
-              Brainstorm Group is a group of companies that provide a range of
-              services to businesses and individuals.This is also a medium for
-              us to incubate and accelerate innovative ideas into successful
-              companies and provide technology solutions for Public, and Private
-              Sectors.
+              Brainstorm Group is a diversified and fully integrated business
+              ventures with specialized innovative technology solutions built
+              with carefully identified functional specifications to meet
+              critical needs in key Sectors of the African Economy for
+              Government and Private Organizations.
             </p>
             <div className="row mb-md-4">
               <div className="col-md-6">

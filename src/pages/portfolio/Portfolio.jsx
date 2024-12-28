@@ -216,14 +216,14 @@ export default function Portfolio({ refi }) {
   }, []);
 
   return (
-    <div>
-      <div className="portfolio-container" ref={refi} id="portfolio">
-        <div className="services-header">
-          <h2 className="services-title">
-            Our <span>Portfolio</span>
-          </h2>
-        </div>
+    <div ref={refi} id="portfolio">
+      <div className="portfolio-container" >
         <div className="row">
+          <div className="services-header">
+            <h2 className="services-title">
+              Our <span>Portfolio</span>
+            </h2>
+          </div>
           {/* Sidebar Menu - 3 columns */}
           <div className="col-md-3">
             <div className="portfolio-sidebar">
