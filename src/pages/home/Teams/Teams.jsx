@@ -124,7 +124,7 @@ export default function Teams({ Ref }) {
                 <img src={featuredMember.image} alt={featuredMember.name} />
               </div>
               <h3>{featuredMember.name}</h3>
-              <h4>{featuredMember.role}</h4>
+              <h5>{featuredMember.role}</h5>
               <p>{featuredMember.description}</p>
               <div className="social-icons">
                 <a href="#" aria-label={`LinkedIn profile of ${featuredMember.name}`}>
@@ -156,7 +156,7 @@ export default function Teams({ Ref }) {
                   </div>
                   <div className="member-info">
                     <h3>{member.name}</h3>
-                    <h4>{member.role}</h4>
+                    <h5>{member.role}</h5>
                     <p>{member.description}</p>
                     <div className="social-icons">
                       <a href="#" aria-label={`LinkedIn profile of ${member.name}`}>

@@ -7,9 +7,6 @@ export default function AboutUs({ refi }) {
     <>
       <div className="portfolio-container" ref={refi} id="aboutus">
         <div className="row align-items-center">
-          <h2 className="services-title">
-            About <span>us</span>
-          </h2>
           <div className="col-md-12 col-lg-6 mb-4 mb-md-0">
             <h3
               className="mb-2"
