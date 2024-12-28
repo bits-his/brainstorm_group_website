@@ -16,15 +16,18 @@ import fahad from "../../../assets/team/fahad1.png";
 import ishaq from "../../../assets/team/ishaq1.png";
 import mustapha from "../../../assets/team/musty1.png";
 
+const ceo = [
+    {
+      id: 1,
+      name: "Phisherman",
+      role: "GROUP CEO",
+      description:
+        "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
+      image: dangana,
+    },
+]
+
 const teamMembers = [
-  {
-    id: 1,
-    name: "Phisherman",
-    role: "GROUP CEO",
-    description:
-      "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: dangana,
-  },
   {
     id: 2,
     name: "Nazif Abdulahi",
@@ -117,11 +120,14 @@ export default function Teams({ Ref }) {
               Our <span>Team</span>
             </h2>
           </div>
-          <div className="team-left col-lg-5 col-md-12">
-            <img src={teamMembers[0].image} alt={teamMembers[0].name} className=""/>
-            <h3>{teamMembers[0].name}</h3>
-            <p>{teamMembers[0].role}</p>
-            <p>{teamMembers[0].description}</p>
+          <div className="team-left col-lg-4 col-md-12">
+            <div className="team-left-image">
+
+            <img src={ceo[0].image} alt={ceo[0].name}/>
+            </div>
+            <h3>{ceo[0].name}</h3>
+            <p>{ceo[0].role}</p>
+            <p>{ceo[0].description}</p>
             <div className="social-icons">
               <a href="#">
                 <FaLinkedin />
@@ -134,10 +140,10 @@ export default function Teams({ Ref }) {
               </a>
             </div>
           </div>
-          <div className="team-right col-lg-7 col-md-12 d-flex">
+          <div className="team-right col-lg-8 col-md-12 d-flex">
             {teamMembers.map((member) => (
               <motion.div
-                className="team-member col-md-6 col-sm-12 text-left"
+                className="team-member col-md-4 col-lg-4 col-sm-12 text-left"
                 key={member.id}
               >
                 <img src={member.image} alt={member.name} />
