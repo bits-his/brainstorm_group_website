@@ -9,19 +9,20 @@ import inventria from "../../assets/logos/inv.png";
 import bitcoops from "../../assets/logos/bit-removebg-preview.png";
 import kasuwa from "../../assets/logos/kasuwa-removebg-preview.png";
 import knowtify from "../../assets/logos/knowtify copy.png";
+import { Link, Element, Events, scroller } from 'react-scroll';
 
 export default function Portfolio({ refi }) {
   const [activeStartup, setActiveStartup] = useState("solutions");
-  const startupRefs = useRef({});
-  const [currentSection, setCurrentSection] = useState("");
+  const [autoScrollEnabled, setAutoScrollEnabled] = useState(true);
+  const scrollIntervalRef = useRef(null);
 
   const startups = [
     {
       id: "solutions",
       name: "Brainstorm IT Solutions",
       image: logo,
-      description:
-        "A leading IT solutions provider specializing in custom software development, web applications, and digital transformation services.",
+      // description:
+      //   "A leading IT solutions provider specializing in custom software development, web applications, and digital transformation services.",
       link: "https://brainstorm.ng",
       list: [
         {
@@ -34,19 +35,19 @@ export default function Portfolio({ refi }) {
           description:
             "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
-        // {
-        //   name: "Digital Transformation",
-        //   description:
-        //     "We help businesses modernize their operations and improve their digital capabilities, ensuring they are efficient, secure, and optimized for performance."
-        // }
+        {
+          name: "Digital Transformation",
+          description:
+            "We help businesses modernize their operations and improve their digital capabilities, ensuring they are efficient, secure, and optimized for performance."
+        }
       ]
     },
     {
       id: "likita",
       name: "My Likita",
       image: mylikita,
-      description:
-        "Healthcare management system that connects patients with healthcare providers, enabling easy access to medical services.",
+      // description:
+      //   "Healthcare management system that connects patients with healthcare providers, enabling easy access to medical services.",
       link: "https://mylikita.com",
       list: [
         {
@@ -70,8 +71,8 @@ export default function Portfolio({ refi }) {
       id: "elite",
       name: "Elite School App",
       image: elite,
-      description:
-        "Comprehensive school management system that streamlines educational processes and enhances communication between schools and parents.",
+      // description:
+      //   "Comprehensive school management system that streamlines educational processes and enhances communication between schools and parents.",
       link: "https://elscholar.ng",
       list: [
         {
@@ -95,8 +96,8 @@ export default function Portfolio({ refi }) {
       id: "inventria",
       name: "Inventria",
       image: inventria,
-      description:
-        "Advanced inventory management system for businesses to track and optimize their stock levels efficiently.",
+      // description:
+      //   "Advanced inventory management system for businesses to track and optimize their stock levels efficiently.",
       link: "https://inventria-new.netlify.app",
       list: [
         {
@@ -120,8 +121,8 @@ export default function Portfolio({ refi }) {
       id: "bitcoops",
       name: "Bitcoops",
       image: bitcoops,
-      description:
-        "Digital platform for cooperative societies to manage their operations and member transactions seamlessly.",
+      // description:
+      //   "Digital platform for cooperative societies to manage their operations and member transactions seamlessly.",
       link: "https://www.bitcoops.com",
       list: [
         {
@@ -145,8 +146,8 @@ export default function Portfolio({ refi }) {
       id: "kasuwa",
       name: "Kasuwa Mall",
       image: kasuwa,
-      description:
-        "E-commerce platform connecting local vendors with customers, providing a seamless shopping experience.",
+      // description:
+      //   "E-commerce platform connecting local vendors with customers, providing a seamless shopping experience.",
       link: "https://kasuwamall.com",
       list: [
         {
@@ -170,8 +171,8 @@ export default function Portfolio({ refi }) {
       id: "knowtify",
       name: "Knowtify",
       image: knowtify,
-      description:
-        "Educational technology platform providing interactive learning experiences and knowledge sharing.",
+      // description:
+      //   "Educational technology platform providing interactive learning experiences and knowledge sharing.",
       link: "https://www.knowtify.com.ng",
       list: [
         {
@@ -194,37 +195,71 @@ export default function Portfolio({ refi }) {
   ];
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveStartup(entry.target.id);
-            setCurrentSection(
-              startups.find((s) => s.id === entry.target.id)?.name || ""
-            );
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    Object.values(startupRefs.current).forEach((ref) => {
-      if (ref) observer.observe(ref);
+    // Initialize scrollspy
+    Events.scrollEvent.register('begin', () => {
+      document.getElementById('portfolio-content').style.scrollBehavior = 'smooth';
     });
 
-    return () => observer.disconnect();
-  }, []);
+    Events.scrollEvent.register('end', () => {
+      setTimeout(() => {
+        document.getElementById('portfolio-content').style.scrollBehavior = 'auto';
+      }, 5000);
+    });
+
+    // Auto-scroll functionality
+    const startAutoScroll = () => {
+      let currentIndex = 0;
+      scrollIntervalRef.current = setInterval(() => {
+        if (autoScrollEnabled) {
+          currentIndex = (currentIndex + 1) % startups.length;
+          if (currentIndex === 0) {
+            // When reaching the end, go back to "solutions"
+            handleScroll("solutions");
+            setActiveStartup("solutions");
+          } else {
+            handleScroll(startups[currentIndex].id);
+            setActiveStartup(startups[currentIndex].id);
+          }
+        }
+      }, 7000); // Wait 7 seconds before scrolling to next section
+    };
+
+    if (autoScrollEnabled) {
+      startAutoScroll();
+    }
+
+    return () => {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+      if (scrollIntervalRef.current) {
+        clearInterval(scrollIntervalRef.current);
+      }
+    };
+  }, [autoScrollEnabled]);
+
+  const handleSetActive = (to) => {
+    setActiveStartup(to);
+    setAutoScrollEnabled(false); // Stop auto-scroll when manually clicking
+    if (scrollIntervalRef.current) {
+      clearInterval(scrollIntervalRef.current);
+    }
+  };
+
+  const handleScroll = (to) => {
+    scroller.scrollTo(to, {
+      containerId: 'portfolio-content',
+      duration: 5000,
+      delay: 0,
+      smooth: true,
+      offset: -100
+    });
+  };
 
   return (
-    <div ref={refi} id="portfolio">
-      <div className="portfolio-container" >
-        <div className="row">
-          <div className="services-header">
-            <h2 className="services-title">
-              Our <span>Portfolio</span>
-            </h2>
-          </div>
-          {/* Sidebar Menu - 3 columns */}
+    <div ref={refi} id="portfolio" className="portfolio-wrapper">
+      <div className="portfolio-container">
+        <div className="portfolio-row">
+          {/* Sidebar Menu */}
           <div className="col-md-3">
             <div className="portfolio-sidebar">
               <h3>Our Companies</h3>
@@ -234,35 +269,55 @@ export default function Portfolio({ refi }) {
                     key={startup.id}
                     className={activeStartup === startup.id ? "active" : ""}
                   >
-                    <a href={`#${startup.id}`}>{startup.name}</a>
+                    <Link
+                      activeClass="active"
+                      to={startup.id}
+                      spy={true}
+                      smooth={true}
+                      duration={5000}
+                      containerId="portfolio-content"
+                      offset={-100}
+                      onSetActive={() => handleSetActive(startup.id)}
+                      onClick={() => {
+                        handleSetActive(startup.id);
+                        handleScroll(startup.id);
+                      }}
+                    >
+                      {startup.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
 
-          {/* Main Content - 9 columns */}
+          {/* Main Content */}
           <div className="col-md-9">
-            <div className="portfolio-content ">
+            <div 
+              className="portfolio-content" 
+              id="portfolio-content"
+              onMouseEnter={() => setAutoScrollEnabled(false)}
+              onMouseLeave={() => setAutoScrollEnabled(true)}
+            >
               {startups.map((startup) => (
-                <motion.div
+                <Element
+                  name={startup.id}
                   key={startup.id}
-                  id={startup.id}
-                  ref={(el) => (startupRefs.current[startup.id] = el)}
-                  className="startup-section"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
+                  className={`startup-section ${activeStartup === startup.id ? 'active' : ''}`}
                 >
-                  <div className="startup-content-wrapper">
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="startup-content-wrapper"
+                  >
                     <div className="startup-info">
                       <img
                         src={startup.image}
                         alt={startup.name}
-                        width={150}
+                        width={100}
                         height={100}
                       />
-                      <p>{startup.description}</p>
                       {startup.list.map((item, index) => (
                         <div key={index}>
                           <ListCard
@@ -283,14 +338,17 @@ export default function Portfolio({ refi }) {
                     <div className="startup-image-wrapper">
                       <img src={startup.image} alt={startup.name} />
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </Element>
               ))}
             </div>
           </div>
         </div>
-        {window.innerWidth <= 768 && currentSection && (
-          <div className="mobile-section-indicator">{currentSection}</div>
+
+        {window.innerWidth <= 768 && activeStartup && (
+          <div className="mobile-section-indicator">
+            {startups.find(s => s.id === activeStartup)?.name}
+          </div>
         )}
       </div>
     </div>

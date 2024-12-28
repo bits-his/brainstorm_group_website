@@ -29,6 +29,7 @@ export default function AppNavigation() {
     services: useRef(),
     aboutus: useRef(),
     teams: useRef(),
+    
     portfolio: useRef(),
   };
 
