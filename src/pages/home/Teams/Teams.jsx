@@ -17,8 +17,8 @@ const teamMembers = [
     role: "GROUP CEO",
     description:
       "As the Group CEO, I lead our diverse portfolio of companies with a vision to transform various sectors through innovative technology solutions. My focus is on strategic growth, fostering innovation, and building sustainable businesses that create value for all stakeholders.",
-    image: "",
-    featured: true
+    image: dangana,
+    featured: true,
   },
   {
     id: 2,
@@ -58,7 +58,7 @@ const teamMembers = [
     role: " CEO Mylikita",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: murtala,
+    image: mustapha,
   },
   {
     id: 7,
@@ -66,7 +66,7 @@ const teamMembers = [
     role: " CEO Inventria",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: fahad,
   },
   {
     id: 8,
@@ -74,7 +74,7 @@ const teamMembers = [
     role: " CEO Knowtify",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: isah,
   },
   {
     id: 9,
@@ -82,7 +82,7 @@ const teamMembers = [
     role: " CEO Bitcoops",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: murtala,
   },
   {
     id: 10,
@@ -90,7 +90,7 @@ const teamMembers = [
     role: " CEO Kasuwa Mall",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: mary,
   },
   {
     id: 11,
@@ -98,7 +98,7 @@ const teamMembers = [
     role: " CEO Elite Academic Tech",
     description:
       "Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis. Glavi amet ritnisi libero molestie ante ut fringilla purus eros quis.",
-    image: "",
+    image: ishaq,
   },
 ];
 
@@ -115,25 +115,30 @@ export default function Teams({ Ref }) {
           <div className="team-left col-lg-4 col-md-12">
             <h2>Our Leadership</h2>
             <p>
-              Meet the visionaries and experts who drive our success through 
+              Meet the visionaries and experts who drive our success through
               innovation, leadership, and commitment to excellence.
             </p>
           </div>
           <div className="team-right col-lg-8 col-md-12">
             {teamMembers.map((member) => (
-              <motion.div 
-                className={`team-member ${member.featured ? 'featured-member' : ''}`}
+              <motion.div
+                className={`team-member ${
+                  member.featured ? "featured-member" : ""
+                }`}
                 key={member.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
                 <div className="member-image">
-                  {member.image ? (
+                  {member.image != "" ? (
                     <img src={member.image} alt={member.name} />
                   ) : (
                     <div className="member-initials">
-                      {member.name.split(' ').map(n => n[0]).join('')}
+                      {member.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
                     </div>
                   )}
                 </div>
@@ -142,13 +147,19 @@ export default function Teams({ Ref }) {
                   <h4>{member.role}</h4>
                   <p>{member.description}</p>
                   <div className="social-icons">
-                    <a href="#" aria-label={`LinkedIn profile of ${member.name}`}>
+                    <a
+                      href="#"
+                      aria-label={`LinkedIn profile of ${member.name}`}
+                    >
                       <FaLinkedin />
                     </a>
                     <a href="#" aria-label={`Email ${member.name}`}>
                       <FaMailBulk />
                     </a>
-                    <a href="#" aria-label={`Instagram profile of ${member.name}`}>
+                    <a
+                      href="#"
+                      aria-label={`Instagram profile of ${member.name}`}
+                    >
                       <FaInstagram />
                     </a>
                   </div>

@@ -34,11 +34,11 @@ export default function Portfolio({ refi }) {
           description:
             "We develop custom software applications for businesses and individuals, ensuring they are efficient, secure, and optimized for performance."
         },
-        {
-          name: "Digital Transformation",
-          description:
-            "We help businesses modernize their operations and improve their digital capabilities, ensuring they are efficient, secure, and optimized for performance."
-        }
+        // {
+        //   name: "Digital Transformation",
+        //   description:
+        //     "We help businesses modernize their operations and improve their digital capabilities, ensuring they are efficient, secure, and optimized for performance."
+        // }
       ]
     },
     {
@@ -227,7 +227,7 @@ export default function Portfolio({ refi }) {
           {/* Sidebar Menu - 3 columns */}
           <div className="col-md-3">
             <div className="portfolio-sidebar">
-              <h3>Our Startups</h3>
+              <h3>Our Companies</h3>
               <ul className="startup-menu">
                 {startups.map((startup) => (
                   <li
@@ -243,7 +243,7 @@ export default function Portfolio({ refi }) {
 
           {/* Main Content - 9 columns */}
           <div className="col-md-9">
-            <div className="portfolio-content">
+            <div className="portfolio-content ">
               {startups.map((startup) => (
                 <motion.div
                   key={startup.id}

@@ -211,6 +211,11 @@ a {
   font-size: 13px;
   margin-bottom: 0.4rem;
 }
+.footer-icon{
+  color: var(--main-color);
+  font-size: 18px;
+  margin-left: -3px;
+}
 @media (max-width: 991px) {
   .logo {
     width: 30%;

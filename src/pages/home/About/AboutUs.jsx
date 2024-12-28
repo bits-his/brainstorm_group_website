@@ -2,14 +2,14 @@ import { TbEye } from "react-icons/tb";
 import img from "../../../assets/DSC_0701.jpg";
 import CoreValue from "../CoreValues/CoreValues";
 import { Target, Compass } from "lucide-react";
-export default function AboutUs({ Ref }) {
+export default function AboutUs({ refi }) {
   return (
     <>
-      <div className="portfolio-container" ref={Ref} id="about">
+      <div className="px-5 my-5" ref={refi} id="aboutus">
+        <h2 className="services-title">
+          About <span>us</span>
+        </h2>
         <div className="row align-items-center">
-          <h2 className="services-title">
-            About <span>us</span>
-          </h2>
           <div className="col-md-12 col-lg-6 mb-4 mb-md-0">
             <h3
               className="mb-2"

@@ -3,7 +3,7 @@ import "./navbar.css";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { FaLightbulb, FaReact } from "react-icons/fa";
 // import {FaSearch } from 'react-icons/fa';
 
@@ -29,11 +29,12 @@ export default function Navbar({ sectionRefs }) {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.2 }
     );
 
     Object.keys(sectionRefs).forEach((key) => {
       if (sectionRefs[key].current) {
+        // console.log(`Observing section: ${key}`);
         observer.observe(sectionRefs[key].current);
       }
     });
@@ -56,13 +57,22 @@ export default function Navbar({ sectionRefs }) {
   console.log(activeSection);
   const location = useLocation();
   const navigate = useNavigate();
+  // console.log(activeSection);
   return (
     <>
       {/* {JSON.stringify(activeSection)} */}
       <header className={`${isSticky ? "isSticky" : ""}`}>
         <div className="header">
-          <div className="logo-container">
-            <NavLink to="/" className=" pt-2">
+          <div
+            className="logo-container"
+            onClick={
+              location.pathname === "/" ? null : () => navigate("/#home")
+            }
+          >
+            <a
+              href="#home"
+              className={activeSection === "home" ? "active" : ""}
+            >
               <div className="text-logo">
                 <FaLightbulb className="brainstorm-icon" />
                 <div className="text-content">
@@ -71,12 +81,12 @@ export default function Navbar({ sectionRefs }) {
                 </div>
               </div>
               {/* <img src={Logo} alt="Brainstorm" fetchpriority="high" /> */}
-            </NavLink>
+            </a>
           </div>
           <div className={`head-main ${isMenuOpen ? "open" : ""}`}>
             <div className="inner">
               <ul className={`navlist`} onClick={handleLinkClick}>
-                <li
+                {/* <li
                   onClick={
                     location.pathname === "/" ? null : () => navigate("/#home")
                   }
@@ -87,27 +97,21 @@ export default function Navbar({ sectionRefs }) {
                   >
                     Home
                   </a>
-                </li>
-                <li
-                  onClick={
-                    location.pathname === "/blog#about"
-                      ? null
-                      : () => navigate("/#about")
-                  }
-                >
+                </li> */}
+                <li onClick={() => console.log("clicked")}>
                   <a
-                    href="#about"
-                    className={activeSection === "about" ? "active" : ""}
+                    href="#aboutus"
+                    className={activeSection === "aboutus" ? "active" : ""}
                   >
                     About
                   </a>
                 </li>
                 <li
-                  onClick={
-                    location.pathname === "/blog#service"
-                      ? null
-                      : () => navigate("/#service")
-                  }
+                // onClick={
+                //   location.pathname === "/blog#service"
+                //     ? null
+                //     : () => navigate("/#service")
+                // }
                 >
                   <a
                     href="#services"
@@ -117,11 +121,11 @@ export default function Navbar({ sectionRefs }) {
                   </a>
                 </li>
                 <li
-                  onClick={
-                    location.pathname === "/blog#portfolio"
-                      ? null
-                      : () => navigate("/#portfolio")
-                  }
+                  // onClick={
+                  //   location.pathname === "/blog#portfolio"
+                  //     ? null
+                  //     : () => navigate("/#portfolio")
+                  // }
                 >
                   <a
                     href="#portfolio"
@@ -131,11 +135,11 @@ export default function Navbar({ sectionRefs }) {
                   </a>
                 </li>
                 <li
-                  onClick={
-                    location.pathname === "/blog#teams"
-                      ? null
-                      : () => navigate("/#teams")
-                  }
+                  // onClick={
+                  //   location.pathname === "/blog#teams"
+                  //     ? null
+                  //     : () => navigate("/#teams")
+                  // }
                 >
                   <a
                     href="#teams"
@@ -144,7 +148,7 @@ export default function Navbar({ sectionRefs }) {
                     Teams
                   </a>
                 </li>
-                <li
+                {/* <li
                   onClick={
                     location.pathname === "/blog#contact"
                       ? null
@@ -157,7 +161,7 @@ export default function Navbar({ sectionRefs }) {
                   >
                     Contact
                   </a>
-                </li>
+                </li> */}
 
                 {/* <li>
             <a href="#blog" className={activeSection === 'blog' ? 'active' : ''}>
@@ -187,5 +191,5 @@ export default function Navbar({ sectionRefs }) {
 }
 
 Navbar.propTypes = {
-  sectionRefs: PropTypes.objectOf(PropTypes.object).isRequired
+  sectionRefs: PropTypes.objectOf(PropTypes.object).isRequired,
 };

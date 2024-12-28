@@ -55,7 +55,7 @@ HeroBackground.propTypes = {
   }),
 };
 
-export default function Hero({ ref }) {
+export default function Hero({ refi }) {
 
 
   const startups = [
@@ -76,7 +76,7 @@ export default function Hero({ ref }) {
   };
 
   return (
-    <section className="hero-section" ref={ref} id="home">
+    <section className="hero-section" ref={refi} id="home">
       <HeroBackground background={heroBackground} />
 
       <motion.div
@@ -92,7 +92,7 @@ export default function Hero({ ref }) {
             transition={{ duration: 0.8 }}
             className="hero-title"
           >
-           Welcome to Brainstorm Group
+            Welcome to Brainstorm Group
             {/* <div className="text-logo align-center justify-center flex items-center">
                 <FaLightbulb className="brainstorm-icon" />
                 <div className="text-content">
@@ -101,14 +101,14 @@ export default function Hero({ ref }) {
                 </div>
               </div> */}
           </motion.h1>
-
+          . . .
           <TypeAnimation
             sequence={[
-              'Group of companies',
+              "We flourish where other solution providers fail",
               1000,
-              'Transforming businesses',
+              "We solve complex business problems",
               1000,
-              'Innovating solutions',
+              "We Brainstorm",
               1000,
             ]}
             wrapper="h2"
@@ -116,8 +116,7 @@ export default function Hero({ ref }) {
             className="typing-text"
             repeat={Infinity}
           />
-
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -126,7 +125,7 @@ export default function Hero({ ref }) {
             We are a group of companies dedicated to delivering cutting-edge solutions
             across multiple industries. Our mission is to transform ideas into reality
             through technology and innovation.
-          </motion.p>
+          </motion.p> */}
         </div>
 
         <motion.div
@@ -135,17 +134,23 @@ export default function Hero({ ref }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          {startups.filter(s => s.id !== 'parent').map((startup) => (
-            <motion.div 
-              key={startup.id} 
-              className="bottom-logo"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <img src={startup.logo} alt={startup.name} title={startup.name} />
-              <span className="bottom-logo-name" title={startup.name}></span>
-            </motion.div>
-          ))}
+          {startups
+            .filter((s) => s.id !== "parent")
+            .map((startup) => (
+              <motion.div
+                key={startup.id}
+                className="bottom-logo"
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <img
+                  src={startup.logo}
+                  alt={startup.name}
+                  title={startup.name}
+                />
+                <span className="bottom-logo-name" title={startup.name}></span>
+              </motion.div>
+            ))}
         </motion.div>
       </motion.div>
     </section>

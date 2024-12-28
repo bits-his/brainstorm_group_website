@@ -5,7 +5,7 @@ import map from "../../assets/map.webp";
 import call from "../../assets/call.webp";
 // import message from "../../assets/logos/message.webp";
 import "./footer.css";
-import { IoLogoFacebook } from "react-icons/io5";
+import { IoLocationSharp, IoLogoFacebook } from "react-icons/io5";
 import { FaLightbulb, FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaMailBulk } from "react-icons/fa";
@@ -46,22 +46,22 @@ export default function Footer() {
 
                   <ul className="footer-social">
                     <li>
-                      <Link to="https://www.facebook.com/BrainstormInnovationHub?_rdc=1&_rdr">
+                      <Link to="#">
                         <IoLogoFacebook />
                       </Link>
                     </li>
                     <li>
-                      <Link to="https://twitter.com/brainstorm_Hub">
+                      <Link to="#">
                         <FaTwitter />
                       </Link>
                     </li>
                     <li>
-                      <Link to="https://www.linkedin.com/company/brainstorm-innovation-hub/">
+                      <Link to="#">
                         <FaLinkedinIn />
                       </Link>
                     </li>
                     <li>
-                      <a href="mailto:hello@brainstorm.ng">
+                      <a href="mailto:hello@brainstormgroup.ng">
                         <FaMailBulk />
                       </a>
                     </li>
@@ -95,14 +95,14 @@ export default function Footer() {
                       <a href="#about">About us</a>
                     </li>
                     <li className="mb-2">
-                      <a href="#client">Our Portfolio</a>
+                      <a href="#services">Services</a>
                     </li>
                     <li className="mb-2">
-                      <a href="#services">Teams</a>
+                      <a href="#portfolio">Portfolio</a>
                     </li>
 
-                    <li>
-                      <a href="/contact">Contact us</a>
+                    <li className="mb-2">
+                      <a href="#teams">Teams</a>
                     </li>
                   </ul>
                 </div>
@@ -180,18 +180,84 @@ export default function Footer() {
               </div>
               <div className="col-12 col-sm-12 col-md-4 ps-sm-1 col-lg-3 col-xl-3">
                 <div className="footer-contact">
-                  <h5 className="mt-3">Contact </h5>
+                  <h5 className="mt-3">Adresses </h5>
                   <div
                     className="underline w-25"
                     style={{ marginTop: "-20px" }}
                   ></div>
 
-                  <div className="location d-flex">
+                  {/* <div className="location d-flex">
                     <img src={map} alt="map" />
                     <p>
                       Floor 1, African Alliance Building, No 1 Sani Abacha Way,
                       Kano
                     </p>
+                  </div> */}
+                  <div id="address">
+                    {/* <h4>Office Location</h4> */}
+                    <ul>
+                      <li>
+                        <div>
+                          <IoLocationSharp className="footer-icon " />
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Cooperate HQ :
+                          </strong>
+                          <br /> Floor 1, African Alliance Building, No 1 Sani
+                          Abacha Way, Kano
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <IoLocationSharp className="footer-icon " />
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Branch Office:
+                          </strong>
+                          <br />
+                          Behind Olu Wheel Balances Workshop, Gidan Dawa,
+                          Katsina State,Nigeria
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <IoLocationSharp className="footer-icon " />
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Branch Office:
+                          </strong>
+                          {/* <br /> */}
+                          Flat 42, DROL Estate Wuye Abuja,Nigeria
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <IoLocationSharp className="footer-icon " />
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Branch Office:
+                          </strong>
+                          {/* <br /> */}
+                          Flat 42, DROL Estate Wuye Abuja,Nigeria
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <IoLocationSharp className="footer-icon " />
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Branch Office:
+                          </strong>
+                          {/* <br /> */}
+                          Flat 42, DROL Estate Wuye Abuja,Nigeria
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <IoLocationSharp className="footer-icon " />
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Branch Office:
+                          </strong>
+                          <br />
+                          Flat 42, DROL Estate Wuye Abuja,Nigeria
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                   {/* <div className="location d-flex">
                     <img src={map} alt="map" />
@@ -230,8 +296,7 @@ export default function Footer() {
         <div className="bottom-footer">
           <div className="copy">
             <p className="ms-2">
-              Copyright &copy;{date} All right reserved | Brainstorm IT
-              Solutions.
+              Copyright &copy;{date} All right reserved | Brainstorm Group.
             </p>
           </div>
           <div>

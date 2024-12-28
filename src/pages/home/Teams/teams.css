@@ -168,6 +168,16 @@
     to { 
         transform: rotate(360deg) translateX(220px) rotate(-360deg);
     }
+    .team-right {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+        padding: 0;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 2rem; /* Added missing property */
+    }
+
 }
 
 @media (max-width: 1200px) {
