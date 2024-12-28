@@ -1,4 +1,3 @@
-
 import Portfolio from "../portfolio/Portfolio";
 import AboutUs from "./About/AboutUs";
 import Contact from "./Contact/Contact";
@@ -10,8 +9,8 @@ import Teams from "./Teams/Teams";
 export default function Home({ sections }) {
   return (
     <>
-      <Hero ref={sections.home} />
-      <AboutUs  id="about" Ref={sections.about} />
+      <Hero id="home" refi={sections.home} />
+      <AboutUs id="aboutus" refi={sections.aboutus} />
       {/* <CoreValue id="corevalues" refi={sections.corevalues} /> */}
       <Services id="services" refi={sections.services} />
       <Portfolio id="portfolio" refi={sections.portfolio} />

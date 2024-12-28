@@ -2,16 +2,19 @@ import { TbEye } from "react-icons/tb";
 import img from "../../../assets/DSC_0701.jpg";
 import CoreValue from "../CoreValues/CoreValues";
 import { Target, Compass } from "lucide-react";
-export default function AboutUs({ Ref }) {
+export default function AboutUs({ refi }) {
   return (
     <>
-      <div className="px-5 my-5" ref={Ref} id="about">
+      <div className="px-5 my-5" ref={refi} id="aboutus">
         <h2 className="services-title">
           About <span>us</span>
         </h2>
         <div className="row align-items-center">
           <div className="col-md-12 col-lg-6 mb-4 mb-md-0">
-            <h3 className="mb-2" style={{ color: "var(--main-color)",fontWeight:"bold" }}>
+            <h3
+              className="mb-2"
+              style={{ color: "var(--main-color)", fontWeight: "bold" }}
+            >
               Brainstorm Group
             </h3>
             <p className="mb-4">
@@ -30,7 +33,10 @@ export default function AboutUs({ Ref }) {
                   className="mb-2"
                   style={{ color: "var(--main-color)" }}
                 />
-                <h5 className="mb-2" style={{ color: "var(--main-color)",fontWeight:"bold"  }}>
+                <h5
+                  className="mb-2"
+                  style={{ color: "var(--main-color)", fontWeight: "bold" }}
+                >
                   Mission
                 </h5>
                 <p className=" mb-2">
@@ -49,7 +55,10 @@ export default function AboutUs({ Ref }) {
 
                   // style={{ color: "#ff3b45" }}
                 />
-                <h5 className="mb-2" style={{ color: "var(--main-color)",fontWeight:"bold" }}>
+                <h5
+                  className="mb-2"
+                  style={{ color: "var(--main-color)", fontWeight: "bold" }}
+                >
                   Vision
                 </h5>
                 <p className=" mb-2">

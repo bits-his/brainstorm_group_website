@@ -55,7 +55,7 @@ HeroBackground.propTypes = {
   }),
 };
 
-export default function Hero({ ref }) {
+export default function Hero({ refi }) {
 
 
   const startups = [
@@ -76,7 +76,7 @@ export default function Hero({ ref }) {
   };
 
   return (
-    <section className="hero-section" ref={ref} id="home">
+    <section className="hero-section" ref={refi} id="home">
       <HeroBackground background={heroBackground} />
 
       <motion.div

@@ -26,12 +26,10 @@ export default function AppNavigation() {
   }, [location.pathname]);
   const sectionRefs = {
     home: useRef(),
-    clients: useRef(),
     services: useRef(),
-    bihub: useRef(),
-    about: useRef(),
-    products: useRef(),
-    blog: useRef(),
+    aboutus: useRef(),
+    teams: useRef(),
+    portfolio: useRef(),
   };
 
   const navigateToHome = () => {

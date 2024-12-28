@@ -46,22 +46,22 @@ export default function Footer() {
 
                   <ul className="footer-social">
                     <li>
-                      <Link to="https://www.facebook.com/BrainstormInnovationHub?_rdc=1&_rdr">
+                      <Link to="#">
                         <IoLogoFacebook />
                       </Link>
                     </li>
                     <li>
-                      <Link to="https://twitter.com/brainstorm_Hub">
+                      <Link to="#">
                         <FaTwitter />
                       </Link>
                     </li>
                     <li>
-                      <Link to="https://www.linkedin.com/company/brainstorm-innovation-hub/">
+                      <Link to="#">
                         <FaLinkedinIn />
                       </Link>
                     </li>
                     <li>
-                      <a href="mailto:hello@brainstorm.ng">
+                      <a href="mailto:hello@brainstormgroup.ng">
                         <FaMailBulk />
                       </a>
                     </li>
@@ -95,14 +95,14 @@ export default function Footer() {
                       <a href="#about">About us</a>
                     </li>
                     <li className="mb-2">
-                      <a href="#client">Our Portfolio</a>
+                      <a href="#services">Services</a>
                     </li>
                     <li className="mb-2">
-                      <a href="#services">Teams</a>
+                      <a href="#portfolio">Portfolio</a>
                     </li>
 
-                    <li>
-                      <a href="/contact">Contact us</a>
+                    <li className="mb-2">
+                      <a href="#teams">Teams</a>
                     </li>
                   </ul>
                 </div>
@@ -202,29 +202,58 @@ export default function Footer() {
                           <strong style={{ color: "black", opacity: "0.8" }}>
                             Cooperate HQ :
                           </strong>
-                          <br />
-                          {" "}Floor 1, African Alliance Building, No 1 Sani Abacha
-                          Way, Kano
+                          <br /> Floor 1, African Alliance Building, No 1 Sani
+                          Abacha Way, Kano
                         </div>
                       </li>
                       <li>
                         <div>
+                          <IoLocationSharp className="footer-icon " />
                           <strong style={{ color: "black", opacity: "0.8" }}>
                             Branch Office:
                           </strong>
                           <br />
-                          <IoLocationSharp />
                           Behind Olu Wheel Balances Workshop, Gidan Dawa,
                           Katsina State,Nigeria
                         </div>
                       </li>
                       <li>
                         <div>
+                          <IoLocationSharp className="footer-icon " />
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Branch Office:
+                          </strong>
+                          {/* <br /> */}
+                          Flat 42, DROL Estate Wuye Abuja,Nigeria
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <IoLocationSharp className="footer-icon " />
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Branch Office:
+                          </strong>
+                          {/* <br /> */}
+                          Flat 42, DROL Estate Wuye Abuja,Nigeria
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <IoLocationSharp className="footer-icon " />
+                          <strong style={{ color: "black", opacity: "0.8" }}>
+                            Branch Office:
+                          </strong>
+                          {/* <br /> */}
+                          Flat 42, DROL Estate Wuye Abuja,Nigeria
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <IoLocationSharp className="footer-icon " />
                           <strong style={{ color: "black", opacity: "0.8" }}>
                             Branch Office:
                           </strong>
                           <br />
-                          <IoLocationSharp />
                           Flat 42, DROL Estate Wuye Abuja,Nigeria
                         </div>
                       </li>
@@ -267,8 +296,7 @@ export default function Footer() {
         <div className="bottom-footer">
           <div className="copy">
             <p className="ms-2">
-              Copyright &copy;{date} All right reserved | Brainstorm IT
-              Solutions.
+              Copyright &copy;{date} All right reserved | Brainstorm Group.
             </p>
           </div>
           <div>
