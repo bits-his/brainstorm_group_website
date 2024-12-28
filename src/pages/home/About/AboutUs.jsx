@@ -1,5 +1,5 @@
 import { TbEye } from "react-icons/tb";
-import img from "../../../assets/DSC_0701.jpg";
+import img from "../../../assets/about4.jpg";
 import CoreValue from "../CoreValues/CoreValues";
 import { Target, Compass } from "lucide-react";
 export default function AboutUs({ refi }) {
