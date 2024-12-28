@@ -91,8 +91,8 @@ export default function CoreValue({ Ref }) {
 
   return (
     <>
-      <div className="my-5" ref={Ref} id="corevalues">
-        <div className="container">
+      <div className="" ref={Ref} id="corevalues">
+        <div className="mx-4">
           <div className="row align-items-center">
             <div className="col-12  col-lg-6">
               <div className={`startup-ecosystem ${isAnyHovered ? 'paused' : ''}`}>
@@ -132,7 +132,7 @@ export default function CoreValue({ Ref }) {
                 ))}
               </div>
             </div>
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6 mb-0">
               <h1 className="mb-4 core-values-title">Core Values</h1>
               <div className="core-values-list">
                 <div className="value-row">
